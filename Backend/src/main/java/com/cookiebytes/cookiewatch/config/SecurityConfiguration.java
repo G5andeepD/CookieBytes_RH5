@@ -81,7 +81,7 @@ public class SecurityConfiguration {
 
 
 
-                //What Students Can Access
+                //What Users Can Access
                 .requestMatchers("/api/v1/user/**").hasAnyRole(ADMIN.name(), USER.name())
                 .requestMatchers(GET, "/api/v1/user/**").hasAnyAuthority(ADMIN_READ.name(), USER_READ.name())
                 .requestMatchers(POST, "/api/v1/user/**").hasAnyAuthority(ADMIN_CREATE.name(), USER_CREATE.name())
