@@ -1,10 +1,15 @@
 import React from 'react';
-import Page from './page';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import UserProfile from './USERPROFILE/userprofile';
+import GenerateMedicals from './USERPROFILE/generatemedical';
 
 export default function App() {
   return (
-    <div>
-      <Page />
-    </div>
+    <Router>
+      <Routes>
+        <Route path='/userprofile' element={<UserProfile />} />
+        <Route path='/generatemedicals' element={<GenerateMedicals />} />
+      </Routes>
+    </Router>
   );
 }
