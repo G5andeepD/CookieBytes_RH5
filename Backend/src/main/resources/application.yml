@@ -1,1 +1,44 @@
-spring.application.name=cookiewatch
+server:
+  port: 5000
+spring:
+  application:
+    name: cookiewatch
+  datasource:
+    url: jdbc:mysql://localhost:3306/cookiewatch?createDatabaseIfNotExist=true
+    username: root
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: mysql
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: cookiebytes.uop@gmail.com
+    password: aljwhitrignpamxo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+    servlet:
+      multipart:
+        enabled: true
+        file-size-threshold: 2MB
+        max-file-size: 5MB
+        max-request-size: 10MB
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
