@@ -283,14 +283,18 @@ return (
         </button>
         </Link>
         <div className='frame-24'>
+          <Link to='/viewmedicals'>
           <span className='view-medical-records'>View Medical Records</span>
+          </Link>
         </div>
         <div className='frame-25'>
           <span className='hospital-admission'>Hospital Admission</span>
         </div>
-        <div className='rectangle-26'>
-          <span className='sign-out'>Sign out</span>
-        </div>
+        <Link to="/">
+      <button className='rectangle-26'>
+        <span className='sign-out'>Sign out</span>
+      </button>
+      </Link>
       </div>
     </div>
   );
