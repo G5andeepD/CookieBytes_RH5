@@ -42,10 +42,17 @@ public class MedicalRecordServiceImpl implements MedicalRecordService {
 
         MedicalRecord record = new MedicalRecord();
         record.setDate(createMedicalRecordRequest.getDate());
-        record.setDoctor(doctor.orElseThrow());
-        record.setCitizen(citizen.orElseThrow());
-        record.setAdmission(admission.orElseThrow());
-        record.setHealthCentre(healthCentre.orElseThrow());
+        // Set doctor if present, else set to null
+        record.setDoctor(doctor.orElse(null));
+
+// Set citizen if present, else set to null
+        record.setCitizen(citizen.orElse(null));
+
+// Set admission if present, else set to null
+        record.setAdmission(admission.orElse(null));
+
+// Set health centre if present, else set to null
+        record.setHealthCentre(healthCentre.orElse(null));
 
         MedicalRecord savedMedicalRecord = medicalRecordRepository.save(record);
 

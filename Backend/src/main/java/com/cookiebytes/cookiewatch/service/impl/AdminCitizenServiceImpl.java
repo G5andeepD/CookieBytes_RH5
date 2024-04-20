@@ -76,6 +76,8 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
         citizen.setHeight(request.getHeight());
         citizen.setWeight(request.getWeight());
         citizen.setBloodType(request.getBloodType());
+        citizen.setLatitude(request.getLattitude());
+        citizen.setLongitude(request.getLongitude());
     }
     private void populateCitizenFromUpdateRequest(Citizen citizen, CitizenDTO request) {
         citizen.setFirstName(request.getFirstName());
@@ -88,6 +90,8 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
         citizen.setHeight(request.getHeight());
         citizen.setWeight(request.getWeight());
         citizen.setBloodType(request.getBloodType());
+        citizen.setLatitude(request.getLatitude());
+        citizen.setLongitude(request.getLongitude());
     }
 
     private CitizenDTO mapToCitizenResponse(Citizen citizen) {
@@ -103,6 +107,8 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
         response.setWeight(citizen.getWeight());
         response.setBloodType(citizen.getBloodType());
         response.setEnabled(citizen.isEnabled());
+        response.setLatitude(citizen.getLatitude());
+        response.setLongitude(citizen.getLongitude());
         return response;
     }
 }

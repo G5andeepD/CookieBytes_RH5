@@ -57,7 +57,8 @@ public class AuthenticationController {
         if (result.equalsIgnoreCase("valid")) {
             // Call authentication service to obtain AuthenticationResponse
             AuthenticationResponse authResponse = authenticationService.getTokensAfterRegistrationVerification(code);
-            return ResponseEntity.ok(authResponse);
+            return ResponseEntity.ok("<h1>Your Email is Verified</h1> <a href='http://localhost:5174/signinpage'>Click Here</a>");
+
         } else if (result.equalsIgnoreCase("expired")) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Verification link has expired");
         }

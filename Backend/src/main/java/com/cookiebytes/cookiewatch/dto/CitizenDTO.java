@@ -22,6 +22,8 @@ public class CitizenDTO {
     private float weight;
     private String bloodType;
     private boolean enabled;
+    private String latitude;
+    private String longitude;
 
 
 }

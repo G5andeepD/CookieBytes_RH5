@@ -52,7 +52,7 @@ public class AuthenticationService {
             .lastName(registerRequest.getLastname())
             .email(registerRequest.getEmail())
             .password(passwordEncoder.encode(registerRequest.getPassword()))
-            .role(Role.USER)
+            .role(Role.CITIZEN)
             .enabled(false)
             .build();
 

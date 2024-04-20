@@ -20,5 +20,7 @@ public class Citizen extends User {
     private float weight;
     private String bloodType;
     private String nationalId;
+    private String latitude;
+    private String longitude;
 
 }

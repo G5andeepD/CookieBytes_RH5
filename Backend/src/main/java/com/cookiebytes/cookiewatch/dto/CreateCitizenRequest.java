@@ -22,4 +22,6 @@ public class CreateCitizenRequest {
     private float height;
     private float weight;
     private String bloodType;
+    private String lattitude;
+    private String longitude;
 }
