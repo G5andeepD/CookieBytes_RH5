@@ -1,7 +1,8 @@
-package com.cookiebytes.cookiewatch.service;
+package com.cookiebytes.cookiewatch.service.impl;
 
 
 import com.cookiebytes.cookiewatch.entity.User;
+import com.cookiebytes.cookiewatch.service.MailService;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;

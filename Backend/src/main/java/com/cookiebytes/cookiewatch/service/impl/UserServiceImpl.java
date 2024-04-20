@@ -1,8 +1,9 @@
-package com.cookiebytes.cookiewatch.service;
+package com.cookiebytes.cookiewatch.service.impl;
 
 
 import com.cookiebytes.cookiewatch.entity.User;
 import com.cookiebytes.cookiewatch.repository.UserRepository;
+import com.cookiebytes.cookiewatch.service.UserService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
