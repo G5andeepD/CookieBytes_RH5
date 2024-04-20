@@ -4,6 +4,8 @@ import UserProfile from './USERPROFILE/userprofile';
 import GenerateMedicals from './USERPROFILE/generatemedical';
 import { AuthProvider } from './Context/AuthContext';
 import { DataProvider } from './Context/DataContext';
+import SignIN from './USERPROFILE/signin';
+import Viewmedicals from './USERPROFILE/viewmedicals';
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
       <Routes>
         <Route path='/userprofile' element={<UserProfile />} />
         <Route path='/generatemedicals' element={<GenerateMedicals />} />
+        <Route path='/' element={<SignIN />} />
+        <Route path='/viewmedicals' element={<Viewmedicals />} />
       </Routes>
     </Router>
       </DataProvider>

@@ -5,6 +5,7 @@ import axios from 'axios';
 import {useState,useContext} from 'react';
 import { LOCAL_HOST_URL,LOCAL_SERVER_URL } from '../constants';
 import { DataContext } from '../Context/DataContext';
+import { Link } from 'react-router-dom';
 
 export default function GenerateMedicals() {
   const { drugs } = useContext(DataContext);
@@ -392,19 +393,25 @@ export default function GenerateMedicals() {
           </div>
           <span className='a-text-28'>Search</span>
         </div>
+        <Link to='/userprofile'>
         <span className='a-your-profile'>Your Profile</span>
+        </Link>
         <span className='a-generate-medical-records'>
           Generate Medical Records
         </span>
         <div className='a-frame-29'>
+          <Link to='/viewmedicals'>
           <span className='a-view-medical-records'>View Medical Records</span>
+          </Link>
         </div>
         <div className='a-frame-2a'>
           <span className='a-hospital-admission'>Hospital Admission</span>
         </div>
-        <div className='a-rectangle-2b'>
-          <span className='a-sign-out'>Sign out</span>
-        </div>
+        <Link to="/">
+      <button className='a-rectangle-2b'>
+        <span className='a-sign-out'>Sign out</span>
+      </button>
+      </Link>
       </div>
     </div>
   );
