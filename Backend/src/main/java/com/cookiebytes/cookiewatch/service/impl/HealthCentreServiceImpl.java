@@ -8,6 +8,8 @@ import com.cookiebytes.cookiewatch.service.HealthCentreService;
 import org.springframework.stereotype.Service;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.List;
+
 @Service
 public class HealthCentreServiceImpl implements HealthCentreService {
 
@@ -37,6 +39,11 @@ public class HealthCentreServiceImpl implements HealthCentreService {
         }
 
         return healthCentreRepository.save(healthCentre);
+    }
+
+    @Override
+    public List<HealthCentre> getHealthCentres() {
+        return healthCentreRepository.findAll();
     }
 
     private Hospital mapToHospital(HealthCentreDTO dto) {

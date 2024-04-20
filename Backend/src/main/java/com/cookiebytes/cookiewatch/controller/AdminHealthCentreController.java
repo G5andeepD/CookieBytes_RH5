@@ -5,10 +5,7 @@ import com.cookiebytes.cookiewatch.entity.HealthCentre;
 import com.cookiebytes.cookiewatch.service.HealthCentreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/admin/health-centre")
@@ -25,6 +22,10 @@ public class AdminHealthCentreController {
         HealthCentre healthCentre = healthCentreService.createHealthCentre(healthCentreDTO);
         return ResponseEntity.ok(healthCentre);
         //return ResponseEntity.ok("Great");
+    }
+    @GetMapping
+    public ResponseEntity<?> getAllHealthCentres() {
+        return ResponseEntity.ok(healthCentreService.getHealthCentres());
     }
 
 

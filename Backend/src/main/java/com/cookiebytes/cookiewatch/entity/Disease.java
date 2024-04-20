@@ -1,24 +1,22 @@
 package com.cookiebytes.cookiewatch.entity;
 
-
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class HealthCentre {
+
+public class Disease {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer centreId;
+    private Long id;
+
     private String name;
-    private String address;
-    private String type;
+    private String description;
 
-    // Getters and setters
+
+
 }
-

@@ -6,6 +6,7 @@ import com.cookiebytes.cookiewatch.repository.CitizenRepository;
 import com.cookiebytes.cookiewatch.entity.Citizen;
 import com.cookiebytes.cookiewatch.service.AdminCitizenService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,9 +18,12 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
 
     private final CitizenRepository citizenRepository;
 
+    private final PasswordEncoder passwordEncoder;
+
     @Autowired
-    public AdminCitizenServiceImpl(CitizenRepository citizenRepository) {
+    public AdminCitizenServiceImpl(CitizenRepository citizenRepository, PasswordEncoder passwordEncoder) {
         this.citizenRepository = citizenRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -28,6 +32,7 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
         Citizen citizen = new Citizen();
         // Assuming setters are defined to set properties from CreateCitizenRequest to Citizen
         populateCitizenFromRequest(citizen, createRequest);
+        citizen.setPassword(passwordEncoder.encode(citizen.getPassword()));
         citizen = citizenRepository.save(citizen);
         return mapToCitizenResponse(citizen);
     }
@@ -59,10 +64,12 @@ public class AdminCitizenServiceImpl implements AdminCitizenService {
     }
 
     private void populateCitizenFromRequest(Citizen citizen, CreateCitizenRequest request) {
+        System.out.println("Mapping is Happening");
         citizen.setFirstName(request.getFirstName());
         citizen.setLastName(request.getLastName());
         citizen.setEmail(request.getEmail());
         citizen.setPassword(request.getPassword());
+        citizen.setNationalId(request.getNationalId());
         citizen.setContactNo(request.getContactNo());
         citizen.setRole(request.getRole());
         citizen.setDateOfBirth(request.getDateOfBirth());

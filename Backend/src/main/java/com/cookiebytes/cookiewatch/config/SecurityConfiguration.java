@@ -60,8 +60,9 @@ public class SecurityConfiguration {
                         "/api/v1/ml/**",
                         "/file/upload",
                         "/api/v1/admintest/**",
-                        "/api/v1/travel/**",
+                        "/api/v1/doctor/**",
                         "api/v1/user/book"
+
 
                 )
                 .permitAll()
@@ -87,6 +88,13 @@ public class SecurityConfiguration {
                 .requestMatchers(POST, "/api/v1/user/**").hasAnyAuthority(ADMIN_CREATE.name(), USER_CREATE.name())
                 .requestMatchers(PUT, "/api/v1/user/**").hasAnyAuthority(ADMIN_UPDATE.name(), USER_UPDATE.name())
                 .requestMatchers(DELETE, "/api/v1/user/**").hasAnyAuthority(ADMIN_DELETE.name(), USER_DELETE.name())
+
+                    //What Doctors
+//                .requestMatchers("/api/v1/doctor/**").hasAnyRole(ADMIN.name(), DOCTOR.name())
+//                .requestMatchers(GET, "/api/v1/doctor/**").hasAnyAuthority(ADMIN_READ.name(), DOCTOR_READ.name())
+//                .requestMatchers(POST, "/api/v1/doctor/**").hasAnyAuthority(ADMIN_CREATE.name(), DOCTOR_CREATE.name())
+//                .requestMatchers(PUT, "/api/v1/doctor/**").hasAnyAuthority(ADMIN_UPDATE.name(), DOCTOR_UPDATE.name())
+//                .requestMatchers(DELETE, "/api/v1/doctor/**").hasAnyAuthority(ADMIN_DELETE.name(), DOCTOR_DELETE.name())
 
 
 

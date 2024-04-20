@@ -15,6 +15,7 @@ public class CreateCitizenRequest {
     private String lastName;
     private String email;
     private String password;
+    private String nationalId;
     private String contactNo;
     private Role role;
     private LocalDate dateOfBirth;
