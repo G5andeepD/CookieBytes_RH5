@@ -4,6 +4,7 @@ import './generatemedical.css';
 import axios from 'axios';
 
 import {useState} from 'react';
+import { LOCAL_HOST_URL,LOCAL_SERVER_URL } from '../constants';
 
 export default function GenerateMedicals() {
 
@@ -26,7 +27,8 @@ export default function GenerateMedicals() {
     nic:'',
   });
 
-  const url = `http://192.168.1.11:5000/api/v1/doctor/citizen/`;
+  const url = `${LOCAL_HOST_URL}/doctor/citizen/`;
+  console.log(url);
 
   const [medicaldetails, setMedicaldetails] = useState({
     diagnosis : '',
