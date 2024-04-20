@@ -17,9 +17,6 @@ function MapModify() {
 }
 export function TestMap() {
 
-    const position = [51.505, -0.09];
-    const redOptions = { color: 'red' };
-    //get an array of points of length 100 in the rectangle defined in setMaxBounds
     const points = Array.from({ length: 1000 }, () => [Math.random() * (-5.9253 + 9.9696) + 5.9253, Math.random() * (81.7876 - 79.6954) + 79.6954]);
     return (
         <div className="flex justify-center">
