@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./SignUpPage.css";
 import { Link } from "react-router-dom";
 import React, { useState } from 'react';
+import axios from "axios";
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -28,13 +29,34 @@ const SignUpPage = () => {
     setConfirmPassword(event.target.value);
   };
 
+  function submitInputs(e){
+    e.preventDefault();
+        const form = e.target
+        const formData = new FormData(form)
+        const value = Object.fromEntries(formData.entries());
+        const data = {
+          firstname:value.firstName,
+          lastname:value.lastName,
+          email:value.email,
+          password:value.password
+        };
+    // console.log(value);
+    axios.post("http://192.168.1.11:5000/api/v1/auth/register", data).then(response => {
+      console.log(response.data)
+    }).catch(error => {
+      console.error(error)
+    });
+    navigate("/signinpage")
+  };
+
   return (
     <div className="signuppage">
-      <div className="rightpane">
+      <form className="rightpane" onSubmit={submitInputs}>
         <div className="sign-up">Sign Up</div>
         <div className="inputfield">
         <input
         className="email-address"
+        name="email"
         style={{
           marginTop: '20px',
           borderWidth: '0',
@@ -55,6 +77,7 @@ const SignUpPage = () => {
         <div className="inputfield1">
         <input
         className="email-address"
+        name="NICNumber"
         style={{
           marginTop: '20px',
           borderWidth: '0',
@@ -73,7 +96,8 @@ const SignUpPage = () => {
         </div>
         <div className="inputfield2">
         <input
-        type="password" // Set type to "password"
+        type="password"
+        name="password"
         value={password}
         onChange={handlePasswordChange}
         className="email-address"
@@ -112,12 +136,13 @@ const SignUpPage = () => {
         }}
       />
           <div className="email-address-wrapper">
-            <div className="email-address">Confirm Password</div>
+            <div className="email-address">Confirm Password {(password == confirmPassword && password != "") ? "✔":"✖"}</div>
           </div>
         </div>
         <div className="inputfield4">
         <input
         className="email-address"
+        name="lastName"
         style={{
           marginTop: '20px',
           borderWidth: '0',
@@ -148,12 +173,13 @@ const SignUpPage = () => {
           onClick={onHomeDuotoneClick}
         />
         <div className="hoveringbutton">
-          <div className="hoveringbutton-child" />
-          <div className="add-button-text"><Link to="/signinpage">Sign Up</Link></div>
+          <div className={(password == confirmPassword && password != "") ? "hoveringbutton-child":"hoveringbuttondisabled-child"} />
+          <div className="add-button-text"><button type="submit">Sign Up</button></div>
         </div>
         <div className="inputfield5">
         <input
         className="email-address"
+        name="firstName"
         style={{
           marginTop: '20px',
           borderWidth: '0',
@@ -171,7 +197,7 @@ const SignUpPage = () => {
             <div className="email-address">First Name</div>
           </div>
         </div>
-      </div>
+      </form>
       <img
         className="blurredellipses-icon"
         alt=""

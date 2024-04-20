@@ -105,6 +105,17 @@
   border-radius: var(--br-81xl);
   background-color: var(--color-slateblue);
 }
+.hoveringbuttondisabled-child {
+  position: absolute;
+  height: 88.52%;
+  width: 94.66%;
+  top: 0;
+  right: 2.8%;
+  bottom: 11.48%;
+  left: 2.54%;
+  border-radius: var(--br-81xl);
+  background-color: #ABB1BB;
+}
 .add-button-text {
   position: absolute;
   height: 77.05%;
