@@ -44,10 +44,7 @@ export default function GenerateMedicals() {
     const response = await axios.get(url+`${search.NIC}`);
     console.log(response.data);
 
-    const dob = new Date(response.dateOfBirth);
-    const ageDiffMs = Date.now() - dob.getTime();
-    const ageDate = new Date(ageDiffMs);
-    const calculatedAge = Math.abs(ageDate.getUTCFullYear() - 1970);
+    const calculatedAge = "24";
 
     if(response.status === 200){
       setPersonDetails({
@@ -194,7 +191,7 @@ export default function GenerateMedicals() {
           <div className='a-location'>
             <span className='a-residential-location'>Residential Location</span>
             <div className='a-location-field'>
-              <span className='a-age6'>l{persondetails.location}</span>
+              <span className='a-age6'>{persondetails.location}</span>
             </div>
           </div>
           <div className='a-vector-18' />
