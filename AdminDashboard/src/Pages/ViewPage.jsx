@@ -38,7 +38,7 @@ function ViewTable({ data }) {//eslint-disable-line
     )
 }
 export function ViewDoctors() {
-    const [doctors, setDoctors] = useState([]);
+    const [doctors, setDoctors] = useState(null);
     // const doctors = [
     //     {
     //         firstName: "Jhonny",
@@ -62,11 +62,17 @@ export function ViewDoctors() {
             })
             .catch(error => {
                 console.error(error);
+                setDoctors(null)
             });
     }, []);
 
-    if (doctors.length === 0) {
-        return <div>Loading...</div>
+    if (doctors === null) {
+        return (
+            <div className="flex flex-col gap-6 p-10 content-center">
+                <h1 className="text-3xl font-bold">Doctors List</h1>
+                <div className="skeleton w-screen h-screen "></div>
+            </div>
+        )
     }
     return (
         <div className="flex flex-col gap-6 p-10">

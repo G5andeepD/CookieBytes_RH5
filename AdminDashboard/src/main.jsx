@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import { ViewDoctors } from './Pages/ViewPage';
+import { TestMap } from './Components/Map';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "ViewDoctors",
         element: <ViewDoctors />
+      },
+      {
+        path: "ViewMap",
+        element: <TestMap />
       }
     ]
   },

@@ -28,6 +28,7 @@ export default function NavBar() {
                                 </summary>
                                 <ul className="p-2 bg-base-100 rounded-t-none ">
                                     <li><Link to={"ViewDoctors"}>Doctor</Link></li>
+                                    <li><Link to={"ViewMap"}>Map</Link></li>
                                 </ul>
                             </details>
                         </li>
