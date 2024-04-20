@@ -6,7 +6,7 @@ import { NotificationContext } from "../context";
 import { setupNotification } from "../Utilities/NotificationHandler";
 
 export default function CreateDoctor() {
-    const [notifications, setNotification] = useContext(NotificationContext);
+    const [notifications, setNotification] = useContext(NotificationContext);//eslint-disable-line
     function formSubmit(e) {
         e.preventDefault();
         const form = e.target

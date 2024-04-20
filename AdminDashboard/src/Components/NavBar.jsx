@@ -24,6 +24,16 @@ export default function NavBar() {
                         <li>
                             <details>
                                 <summary>
+                                    View
+                                </summary>
+                                <ul className="p-2 bg-base-100 rounded-t-none ">
+                                    <li><Link to={"ViewDoctors"}>Doctor</Link></li>
+                                </ul>
+                            </details>
+                        </li>
+                        <li>
+                            <details>
+                                <summary>
                                     Create
                                 </summary>
                                 <ul className="p-2 bg-base-100 rounded-t-none ">

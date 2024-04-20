@@ -3,7 +3,7 @@ import { NotificationContext } from "../context";
 
 
 export function NotificationContainer() {
-    const [notifications, setNotification] = useContext(NotificationContext);
+    const [notifications, setNotification] = useContext(NotificationContext);//eslint-disable-line
     //loop over notifications to create many toasts
     console.log(notifications)
     return (

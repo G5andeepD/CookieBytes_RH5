@@ -4,9 +4,12 @@ import axios from "axios";
 import { AUTH_ADMIN } from "../Constant";
 import { set_auth_token } from "../Utilities/authentication";
 import { useNavigate } from "react-router-dom";
+import { setupNotification } from "../Utilities/NotificationHandler";
+import { NotificationContext } from "../context";
 function LoginForm() {
 
-    const [isLogged, setLogged] = useContext(IsLoggedContext);
+    const [isLogged, setLogged] = useContext(IsLoggedContext);//eslint-disable-line
+    const [notifications, setNotification] = useContext(NotificationContext);//eslint-disable-line
     const navigate = useNavigate();
     function formSubmit(e) {
         e.preventDefault()
@@ -31,9 +34,11 @@ function LoginForm() {
             set_auth_token(response.data.access_token);
             setLogged(true);
             navigate("/");
+            setupNotification(setNotification, "Login Successful", "success")
         }).catch(error => {
             console.error(error);
             setLogged(false);
+            setupNotification(setNotification, "Login Failed", "error")
         });
     }
     return (

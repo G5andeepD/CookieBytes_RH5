@@ -8,6 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import { ViewDoctors } from './Pages/ViewPage';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
       {
         path: "CreateRisk",
         element: <CreateRiskPage />
+      },
+      {
+        path: "ViewDoctors",
+        element: <ViewDoctors />
       }
     ]
   },
