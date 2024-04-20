@@ -14,7 +14,10 @@ dist-ssr
 
 # Editor directories and files
 .vscode/*
+<<<<<<< HEAD
 .vite/*
+=======
+>>>>>>> 2cf3dfb (created Admin)
 !.vscode/extensions.json
 .idea
 .DS_Store
