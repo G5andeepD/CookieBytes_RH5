@@ -24,6 +24,31 @@ export default function Main(){
       [name]: value,
     });
   };
+  
+  const handleWorkingLocationChange = (index, value) => {
+    const updatedLocations = [...formdata.working_locations];
+    updatedLocations[index] = value;
+    setFormdata({
+      ...formdata,
+      working_locations: updatedLocations,
+    });
+  };
+
+  const addWorkingLocation = () => {
+    setFormdata({
+      ...formdata,
+      working_locations: [...formdata.working_locations, ''],
+    });
+  };
+
+  const removeWorkingLocation = (index) => {
+    const updatedLocations = [...formdata.working_locations];
+    updatedLocations.splice(index, 1);
+    setFormdata({
+      ...formdata,
+      working_locations: updatedLocations,
+    });
+  };
 
 return (
     <div className='main-container'>
@@ -182,19 +207,41 @@ return (
           <div className='flex-row-14'>
             <div className='companies'>
               <span className='working-locations'>Working Locations</span>
+              <div>
+                <input
+                type='text'
+                name='working_location'
+                value={formdata.working_locations[formdata.working_locations.length - 1]}
+                onChange={(e) => handleWorkingLocationChange(formdata.working_locations.length - 1, e.target.value)}
+                className='working-location-field'
+                placeholder='Add Working Location'
+                />
+            <button onClick={addWorkingLocation} className='add-location-button'>
+              <span className='text-13'>Add</span>
+              </button>
+              </div>
               <div className='company'>
                 <div className='company-icon'>
                   <div className='ellipse-15' />
+                  <button className='remove-location-button' onClick={()=>removeWorkingLocation(0)}>
+                    <span className='text-13'>Remove</span>
+                  </button>
                   <div className='ellipse-16' />
+                  <button className='remove-location-button2' onClick={()=>removeWorkingLocation(1)}>
+                    <span className='text-13'>Remove</span>
+                  </button>
                   <div className='ellipse-17' />
+                  <button className='remove-location-button3' onClick={()=>removeWorkingLocation(2)}>
+                    <span className='text-13'>Remove</span>
+                  </button>
                 </div>
-                <span className='procrew'>ProCrew</span>
+                <span className='procrew'>{formdata.working_locations[0]}</span>
               </div>
               <div className='company-18'>
-                <span className='noon'>Noon</span>
+                <span className='noon'>{formdata.working_locations[1]}</span>
               </div>
               <div className='company-19'>
-                <span className='lamasatech'>LamasaTech</span>
+                <span className='lamasatech'>{formdata.working_locations[2]}</span>
               </div>
             </div>
             <div className='vector-1a' />
