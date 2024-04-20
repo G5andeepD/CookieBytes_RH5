@@ -274,9 +274,11 @@ return (
           <span className='text-23'>Search</span>
         </div>
         <span className='your-profile'>Your Profile</span>
+        <button className='generate-button'>
         <span className='generate-medical-records'>
           Generate Medical Records
         </span>
+        </button>
         <div className='frame-24'>
           <span className='view-medical-records'>View Medical Records</span>
         </div>
