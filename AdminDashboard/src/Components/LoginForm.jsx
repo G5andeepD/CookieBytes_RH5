@@ -3,9 +3,11 @@ import { IsLoggedContext } from "../context";
 import axios from "axios";
 import { AUTH_ADMIN } from "../Constant";
 import { set_auth_token } from "../Utilities/authentication";
+import { useNavigate } from "react-router-dom";
 function LoginForm() {
 
     const [isLogged, setLogged] = useContext(IsLoggedContext);
+    const navigate = useNavigate();
     function formSubmit(e) {
         e.preventDefault()
         console.log(e);
@@ -28,6 +30,7 @@ function LoginForm() {
             console.log(response.data);
             set_auth_token(response.data.access_token);
             setLogged(true);
+            navigate("/");
         }).catch(error => {
             console.error(error);
             setLogged(false);

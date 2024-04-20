@@ -1,10 +1,17 @@
 
 import { useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { IsLoggedContext } from "../context"
+import { clear_token } from "../Utilities/authentication";
 export default function NavBar() {
     const [isLogged, setLogged] = useContext(IsLoggedContext);
+    let navigate = useNavigate();
     console.log(isLogged);
+    function logOut() {
+        setLogged(false);
+        clear_token();
+        navigate('/Login', { replace: true })
+    }
 
     if (isLogged) {
         return (
@@ -27,7 +34,7 @@ export default function NavBar() {
                             </details>
                         </li>
                         <li>
-                            <Link to={"Login"}>Log Out</Link>
+                            <a onClick={logOut}>Log Out</a>
                         </li>
                     </ul>
                 </div>

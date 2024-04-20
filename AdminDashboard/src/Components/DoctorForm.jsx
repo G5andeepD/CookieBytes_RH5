@@ -1,7 +1,12 @@
 import axios from "axios";
 import { CREATE_DOCTOR } from "../Constant";
 import { get_auth_token } from "../Utilities/authentication";
+import { useContext } from "react";
+import { NotificationContext } from "../context";
+import { setupNotification } from "../Utilities/NotificationHandler";
+
 export default function CreateDoctor() {
+    const [notifications, setNotification] = useContext(NotificationContext);
     function formSubmit(e) {
         e.preventDefault();
         const form = e.target
@@ -28,9 +33,11 @@ export default function CreateDoctor() {
         axios.post(CREATE_DOCTOR, data, config)
             .then(response => {
                 console.log(response.data);
+                setupNotification(setNotification, "Doctor Created Successfully", "success")
             })
             .catch(error => {
                 console.error(error);
+                setupNotification(setNotification, "Doctor Creation Failed", "error")
             });
     }
     return (
@@ -72,7 +79,7 @@ export default function CreateDoctor() {
                 </div>
                 <input name="specialty" type="text" placeholder="Cardiologist" className="input input-bordered w-full max-w-xs" />
             </label>
-            <button className="btn btn-wide" type="submit">Create</button>
+            <button className="btn btn-wide" type="submit" >Create</button>
         </form>
     )
 

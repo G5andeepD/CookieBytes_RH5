@@ -18,6 +18,10 @@ const router = createBrowserRouter([
         element: <LoginPage />
       },
       {
+        path: "",
+        element: <h1 className='h-screen flex flex-row justify-center items-center text-8xl'>Welcome!</h1>
+      },
+      {
         path: "CreatePHI",
         element: <CreatePHIPage />
       },
