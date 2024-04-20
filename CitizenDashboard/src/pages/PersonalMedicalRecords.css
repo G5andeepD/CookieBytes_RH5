@@ -1,0 +1,179 @@
+.personal-medical-report,
+.sign-in2 {
+  position: absolute;
+  top: 128px;
+  left: 180px;
+  font-weight: 800;
+  display: inline-block;
+  width: 792px;
+  height: 96px;
+}
+.sign-in2 {
+  top: 955px;
+  left: 469px;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  color: var(--color-slateblue);
+  display: none;
+  width: 219px;
+  height: 34px;
+}
+.date {
+  position: relative;
+  font-weight: 800;
+}
+.date-wrapper {
+  border: 1px solid var(--color-black);
+  display: flex;
+  flex-direction: row;
+}
+.date-wrapper,
+.doctor-wrapper {
+  flex: 1;
+  background-color: var(--color-gray-400);
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.doctor-wrapper,
+.frame-container,
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.frame-container {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-xl);
+}
+.wrapper {
+  flex: 1;
+  background-color: var(--color-slateblue);
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.buddhi-wijenayake {
+  position: relative;
+}
+.frame-parent1 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.frame-group {
+  position: absolute;
+  top: 243px;
+  left: 158px;
+  width: 835px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: var(--font-size-mini);
+  color: var(--color-white);
+}
+.rightpane2 {
+  position: absolute;
+  top: 0;
+  left: 576px;
+  border-radius: var(--br-21xl) 0 0 var(--br-21xl);
+  background-color: var(--color-white);
+  width: 1152px;
+  height: 1117px;
+}
+.blurredellipses-icon3,
+.leftpane-child {
+  position: absolute;
+  top: 158px;
+  left: -200px;
+  width: 706px;
+  height: 1200px;
+}
+.leftpane-child {
+  height: 22.44%;
+  width: 33.45%;
+  top: 0;
+  right: 50.81%;
+  bottom: 77.56%;
+  left: 15.74%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.praveen-sumanasekara1 {
+  position: absolute;
+  height: 3.19%;
+  width: 64.76%;
+  top: 24.52%;
+  left: 0;
+  font-weight: 600;
+  display: inline-block;
+}
+.dgraphic-child,
+.dgraphic-inner,
+.dgraphic-item {
+  position: absolute;
+  height: 63.86%;
+  width: 69.55%;
+  top: 36.14%;
+  right: 18.69%;
+  bottom: 0;
+  left: 11.76%;
+  border-radius: 42.99px;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: contain;
+}
+.dgraphic-inner,
+.dgraphic-item {
+  height: 59.69%;
+  width: 63.67%;
+  top: 6.84%;
+  right: 36.33%;
+  bottom: 33.47%;
+  left: 0;
+}
+.dgraphic-inner {
+  height: 66.32%;
+  width: 70.75%;
+  top: 0;
+  right: 0;
+  bottom: 33.68%;
+  left: 29.25%;
+}
+.dgraphic {
+  position: absolute;
+  height: 69.22%;
+  width: 99.24%;
+  top: 30.78%;
+  right: 0;
+  bottom: 0;
+  left: 0.76%;
+}
+.leftpane2 {
+  position: absolute;
+  top: 85px;
+  left: 65px;
+  width: 647.9px;
+  height: 990.9px;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.personalmedicalrecords {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-300);
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-45xl);
+  color: var(--color-black);
+  font-family: var(--font-outfit);
+}

@@ -1,0 +1,39 @@
+.home {
+  position: absolute;
+  top: 30%;
+  left: 64.66%;
+  text-transform: capitalize;
+}
+.watch3 {
+  color: var(--color-slateblue);
+}
+.contact-us,
+.cookiewatch2,
+.our-team {
+  position: absolute;
+  text-transform: capitalize;
+}
+.cookiewatch2 {
+  top: 0;
+  left: -10.99%;
+  font-size: var(--font-size-29xl);
+}
+.contact-us,
+.our-team {
+  top: 30%;
+  left: 83.22%;
+}
+.our-team {
+  left: 72.61%;
+}
+.navigationbar {
+  position: absolute;
+  top: 30px;
+  left: 182px;
+  width: 1347px;
+  height: 60px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-outfit);
+}

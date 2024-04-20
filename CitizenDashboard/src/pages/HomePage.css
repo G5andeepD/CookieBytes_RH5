@@ -1,0 +1,7 @@
+.homepage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-300);
+  height: 2821px;
+  overflow: hidden;
+}

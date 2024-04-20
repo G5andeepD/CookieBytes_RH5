@@ -1,0 +1,130 @@
+.complaints {
+  position: absolute;
+  top: 172px;
+  left: 361px;
+  font-weight: 800;
+  display: inline-block;
+  width: 435px;
+  height: 96px;
+}
+.enter-your-complaint {
+  position: relative;
+  font-weight: 500;
+}
+.enter-your-complaint-here-wrapper {
+  position: absolute;
+  top: -22px;
+  left: 17px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.inputfield6 {
+  position: absolute;
+  top: 268px;
+  left: 180px;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 792px;
+  height: 587px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+}
+.buttonsubmit-child {
+  position: absolute;
+  top: 0;
+  left: 148px;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-slateblue);
+  width: 175px;
+  height: 54px;
+}
+.buttonsubmit,
+.submit {
+  position: absolute;
+  width: 470px;
+}
+.submit {
+  top: 14px;
+  left: 1px;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  display: inline-block;
+  height: 47px;
+}
+.buttonsubmit {
+  top: 883px;
+  left: 343px;
+  height: 61px;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.rightpane3 {
+  position: absolute;
+  top: 0;
+  left: 576px;
+  border-radius: var(--br-21xl) 0 0 var(--br-21xl);
+  background-color: var(--color-white);
+  width: 1152px;
+  height: 1117px;
+}
+.blurredellipses-icon4 {
+  position: absolute;
+  top: 158px;
+  left: -200px;
+  width: 706px;
+  height: 1200px;
+}
+.watch2 {
+  color: var(--color-slateblue);
+}
+.cookiewatch1 {
+  position: absolute;
+  height: 10.92%;
+  width: 48.33%;
+  top: 0;
+  left: 11.78%;
+  font-weight: 800;
+  display: inline-block;
+}
+.image-icon2 {
+  position: absolute;
+  height: 76.79%;
+  width: 100%;
+  top: 23.21%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.leftpane3 {
+  position: absolute;
+  top: 125px;
+  left: -35px;
+  width: 900px;
+  height: 879px;
+  color: var(--color-white);
+  font-family: var(--font-overpass);
+}
+.complaintspage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-300);
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-45xl);
+  color: var(--color-black);
+  font-family: var(--font-outfit);
+}

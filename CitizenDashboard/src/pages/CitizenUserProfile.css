@@ -1,0 +1,576 @@
+.profilepane-child {
+  position: absolute;
+  height: 100%;
+  width: 91.28%;
+  top: 0;
+  right: 5.15%;
+  bottom: 0;
+  left: 3.57%;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: var(--br-146xl-5) var(--br-146xl-5) 0 0;
+  background-color: var(--color-white);
+  border: 2px solid rgba(36, 39, 96, 0.31);
+  box-sizing: border-box;
+}
+.profilepane-item {
+  position: absolute;
+  height: 28.01%;
+  width: 51.64%;
+  top: 4.77%;
+  right: 24.86%;
+  bottom: 67.22%;
+  left: 23.5%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.praveen-sumanasekara {
+  position: absolute;
+  height: 3.98%;
+  width: 100%;
+  top: 35.34%;
+  left: 0;
+  font-weight: 600;
+  display: inline-block;
+}
+.material-symbolslocation-on-icon {
+  position: absolute;
+  height: 81.47%;
+  width: 14.81%;
+  top: 0;
+  right: 85.19%;
+  bottom: 18.53%;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.badulla-sri-lanka {
+  position: absolute;
+  height: 79.79%;
+  width: 83.67%;
+  top: 20.21%;
+  left: 16.33%;
+  line-height: 87.52%;
+  font-weight: 500;
+  display: inline-block;
+}
+.material-symbolslocation-on-parent {
+  position: absolute;
+  height: 5.98%;
+  width: 60.84%;
+  top: 39.29%;
+  right: 15.56%;
+  bottom: 54.72%;
+  left: 23.59%;
+  text-align: left;
+  font-size: 18px;
+  color: var(--color-dimgray);
+}
+.div,
+.weight {
+  position: absolute;
+  height: 52.09%;
+  width: 81.02%;
+  top: 0;
+  left: 10.09%;
+  line-height: 87.52%;
+  font-weight: 600;
+  display: inline-block;
+}
+.weight {
+  height: 30.38%;
+  width: 100%;
+  top: 69.62%;
+  left: 0;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-dimgray);
+}
+.bmi,
+.div1,
+.parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.parent {
+  height: 100%;
+  width: 25.89%;
+  right: 74.11%;
+  bottom: 0;
+}
+.bmi,
+.div1 {
+  height: 51.71%;
+  width: 100%;
+  line-height: 87.52%;
+  font-weight: 600;
+  display: inline-block;
+}
+.bmi {
+  height: 28.84%;
+  width: 52.87%;
+  top: 71.16%;
+  left: 24.17%;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-dimgray);
+}
+.div2,
+.group {
+  position: absolute;
+  top: 0;
+}
+.group {
+  height: 97.83%;
+  width: 29.74%;
+  right: 0;
+  bottom: 2.17%;
+  left: 70.26%;
+}
+.div2 {
+  height: 50.58%;
+  width: 75.9%;
+  left: 9.05%;
+  line-height: 87.52%;
+  font-weight: 600;
+  display: inline-block;
+}
+.container,
+.group-parent {
+  position: absolute;
+  height: 100%;
+  width: 28.86%;
+  top: 0;
+  right: 37.47%;
+  bottom: 0;
+  left: 33.67%;
+}
+.group-parent {
+  height: 7.54%;
+  width: 92.16%;
+  top: 54.66%;
+  right: 4.5%;
+  bottom: 37.8%;
+  left: 3.34%;
+  font-size: var(--font-size-17xl);
+}
+.edit-profile,
+.group-child {
+  position: absolute;
+  width: 98.93%;
+}
+.group-child {
+  height: 100%;
+  top: 0;
+  right: 1.07%;
+  bottom: 0;
+  left: 0;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.edit-profile {
+  height: 37.85%;
+  top: 27.69%;
+  left: 1.07%;
+  letter-spacing: 0.09em;
+  line-height: 87.52%;
+  display: inline-block;
+}
+.group-item,
+.rectangle-parent {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.group-item {
+  height: 22.51%;
+  width: 94.7%;
+  right: 5.3%;
+  bottom: 77.49%;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.add-friends {
+  position: relative;
+  line-height: 87.52%;
+}
+.add-friends-wrapper {
+  position: absolute;
+  height: 14.8%;
+  width: 56.25%;
+  top: 85.2%;
+  right: -0.05%;
+  bottom: 0;
+  left: 43.8%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-group {
+  position: absolute;
+  height: 444.22%;
+  width: 51.37%;
+  top: 69.52%;
+  right: -4.88%;
+  bottom: -413.75%;
+  left: 53.51%;
+  display: none;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+.group-container {
+  position: absolute;
+  height: 6.32%;
+  width: 84.94%;
+  top: 74.02%;
+  right: 8.75%;
+  bottom: 19.66%;
+  left: 6.32%;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.group-inner,
+.profilepane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 419.6px;
+  height: 794px;
+}
+.group-inner {
+  height: 100%;
+  width: 100%;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.view-personal-medical {
+  position: absolute;
+  height: 37.55%;
+  width: 69.05%;
+  top: 32.41%;
+  left: 15.57%;
+  letter-spacing: 0.09em;
+  line-height: 87.52%;
+  display: inline-block;
+}
+.rectangle-div {
+  position: absolute;
+  height: 22.51%;
+  width: 78.76%;
+  top: 0;
+  right: 21.24%;
+  bottom: 77.49%;
+  left: 0;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.add-friends-container {
+  position: absolute;
+  height: 14.8%;
+  width: 85.12%;
+  top: 85.25%;
+  right: 0;
+  bottom: -0.04%;
+  left: 14.88%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-parent1 {
+  position: absolute;
+  height: 440.71%;
+  width: 16.2%;
+  top: 20.95%;
+  right: 33.11%;
+  bottom: -361.66%;
+  left: 50.69%;
+  display: none;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+.group-div {
+  position: absolute;
+  height: 23.47%;
+  width: 99.87%;
+  top: 0;
+  right: 0.13%;
+  bottom: 76.53%;
+  left: 0;
+}
+.give-access-to {
+  position: absolute;
+  height: 37.55%;
+  width: 100%;
+  top: 32.41%;
+  left: 0;
+  letter-spacing: 0.09em;
+  line-height: 87.52%;
+  display: inline-block;
+}
+.group-child2 {
+  position: absolute;
+  height: 22.51%;
+  width: 83.55%;
+  top: 0;
+  right: 16.45%;
+  bottom: 77.49%;
+  left: 0;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.add-friends-frame {
+  position: absolute;
+  height: 14.8%;
+  width: 62.31%;
+  top: 85.25%;
+  right: -0.06%;
+  bottom: -0.04%;
+  left: 37.75%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-parent3 {
+  position: absolute;
+  height: 440.71%;
+  width: 22.13%;
+  top: -26.09%;
+  right: 52.32%;
+  bottom: -314.62%;
+  left: 25.55%;
+  display: none;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+.group-child4,
+.group-parent1 {
+  position: absolute;
+  height: 23.47%;
+  width: 99.87%;
+  top: 39.42%;
+  right: 0;
+  bottom: 37.11%;
+  left: 0.13%;
+}
+.group-child4 {
+  height: 22.51%;
+  width: 62.07%;
+  top: 0;
+  right: 37.93%;
+  bottom: 77.49%;
+  left: 0;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.frame-div {
+  position: absolute;
+  height: 14.8%;
+  width: 95.28%;
+  top: 85.25%;
+  right: 0.09%;
+  bottom: -0.04%;
+  left: 4.63%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-parent5 {
+  position: absolute;
+  height: 440.71%;
+  width: 29.8%;
+  top: -26.09%;
+  right: 38.54%;
+  bottom: -314.62%;
+  left: 31.65%;
+  display: none;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+.group-parent2 {
+  height: 23.47%;
+  width: 48.5%;
+  top: 76.07%;
+  right: 51.5%;
+  bottom: 0.46%;
+}
+.group-child6,
+.group-parent2,
+.log-out {
+  position: absolute;
+  left: 0;
+}
+.log-out {
+  height: 37.55%;
+  width: 100%;
+  top: 29.64%;
+  letter-spacing: 0.09em;
+  line-height: 87.52%;
+  display: inline-block;
+}
+.group-child6 {
+  height: 22.51%;
+  width: 52.3%;
+  top: 0;
+  right: 47.7%;
+  bottom: 77.49%;
+  border-radius: var(--br-2xs);
+  background-color: var(--color-gray-200);
+}
+.add-friends-wrapper1 {
+  position: absolute;
+  height: 14.8%;
+  width: 80.28%;
+  top: 85.25%;
+  right: 0;
+  bottom: -0.04%;
+  left: 19.72%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs);
+  box-sizing: border-box;
+}
+.rectangle-parent7 {
+  position: absolute;
+  height: 440.71%;
+  width: 35.37%;
+  top: -26.09%;
+  right: 8.93%;
+  bottom: -314.62%;
+  left: 55.69%;
+  display: none;
+  text-align: left;
+  font-size: var(--font-size-mini);
+  font-family: var(--font-inter);
+}
+.group-parent3 {
+  position: absolute;
+  height: 23.47%;
+  width: 48.5%;
+  top: 76.53%;
+  right: 0.03%;
+  bottom: 0;
+  left: 51.48%;
+}
+.rightpanebuttons {
+  position: absolute;
+  top: 344px;
+  left: 679px;
+  width: 747.9px;
+  height: 215.6px;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.center {
+  position: absolute;
+  top: 154px;
+  left: 134px;
+  width: 1426.9px;
+  height: 794px;
+}
+.material-symbolshome-outline- {
+  width: 42px;
+  position: relative;
+  height: 42px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.icons {
+  position: absolute;
+  top: 361px;
+  left: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 48px;
+}
+.blurredellipses-icon2,
+.toppane-child {
+  position: absolute;
+  top: -254px;
+  left: 460px;
+  width: 1275px;
+  height: 481px;
+}
+.toppane-child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.healthcare-is-not {
+  position: absolute;
+  height: 58.44%;
+  width: 63.77%;
+  top: 20.78%;
+  left: 34.95%;
+  line-height: 117%;
+  font-weight: 500;
+  display: inline-block;
+}
+.toppane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1728px;
+  height: 308px;
+  font-size: var(--font-size-29xl);
+  color: var(--color-white);
+  font-family: var(--font-outfit);
+}
+.macbook-air-1 {
+  background-color: var(--color-white);
+  overflow: hidden;
+}
+.citizenprofile,
+.macbook-air-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1728px;
+  height: 1117px;
+}
+.citizenuserprofile {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-white);
+  height: 1117px;
+  overflow: hidden;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-darkslateblue-100);
+  font-family: var(--font-inter);
+}
