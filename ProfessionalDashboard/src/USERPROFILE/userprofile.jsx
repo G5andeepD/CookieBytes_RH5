@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 export default function userprofile(){
   const [formdata, setFormdata] = useState({
@@ -274,11 +275,13 @@ return (
           <span className='text-23'>Search</span>
         </div>
         <span className='your-profile'>Your Profile</span>
-        <button className='generate-button'>
+        <Link to='/generatemedicals'>
+        <button className='generate-button' >
         <span className='generate-medical-records'>
           Generate Medical Records
         </span>
         </button>
+        </Link>
         <div className='frame-24'>
           <span className='view-medical-records'>View Medical Records</span>
         </div>
