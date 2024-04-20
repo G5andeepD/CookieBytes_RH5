@@ -16,35 +16,35 @@ public class CookiewatchApplication {
 		SpringApplication.run(CookiewatchApplication.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner commandLineRunner(
-											   UserRepository userRepository,
-
-											   PasswordEncoder passwordEncoder){
-		return args -> {
-
-
-
-			userRepository.save(User.builder()
-					.firstName("ADMIN")
-					.lastName("MAIN")
-					.email("admin@cookiewatch.com")
-					.password(passwordEncoder.encode("password")) // Ensure password is encoded
-					.contactNo("1234567890") // Add a contact number if required
-					.role(Role.ADMIN) // Assuming Role.ADMIN is a valid enum
-					.enabled(true) // Enable the user account
-					.build());
-
-
-
-
-
-
-
-
-
-
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(
+//											   UserRepository userRepository,
+//
+//											   PasswordEncoder passwordEncoder){
+//		return args -> {
+//
+//
+//
+//			userRepository.save(User.builder()
+//					.firstName("ADMIN")
+//					.lastName("MAIN")
+//					.email("admin@cookiewatch.com")
+//					.password(passwordEncoder.encode("password")) // Ensure password is encoded
+//					.contactNo("1234567890") // Add a contact number if required
+//					.role(Role.ADMIN) // Assuming Role.ADMIN is a valid enum
+//					.enabled(true) // Enable the user account
+//					.build());
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//		};
+//	}
 
 }
