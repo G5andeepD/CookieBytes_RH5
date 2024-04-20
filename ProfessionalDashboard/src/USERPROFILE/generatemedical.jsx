@@ -2,11 +2,13 @@ import React from 'react';
 import {toast} from 'react-toastify';
 import './generatemedical.css';
 import axios from 'axios';
-
-import {useState} from 'react';
+import {useState,useContext} from 'react';
+import { LOCAL_HOST_URL,LOCAL_SERVER_URL } from '../constants';
+import { DataContext } from '../Context/DataContext';
 import { Link } from 'react-router-dom';
 
 export default function GenerateMedicals() {
+  const { drugs } = useContext(DataContext);
 
   const [search, setSearch] = useState({
     NIC : '',
@@ -27,7 +29,46 @@ export default function GenerateMedicals() {
     nic:'',
   });
 
-  const url = `http://192.168.1.11:5000/api/v1/doctor/citizen/`;
+  const [prescriptions, setPrescriptions] = useState([{
+    drugId: 0,
+    startDate: '',
+    endDate: '',
+    morning: false,
+    afternoon: false,
+    evening: false,
+    night: false
+  }]);
+
+  const handlePrescriptionChange = (index, e) => {
+    const newPrescriptions = [...prescriptions];
+    if (e.target.type === 'checkbox') {
+      newPrescriptions[index][e.target.name] = e.target.checked;
+    } else {
+      newPrescriptions[index][e.target.name] = e.target.value;
+    }
+    setPrescriptions(newPrescriptions);
+  };
+
+  const addPrescription = () => {
+    setPrescriptions([...prescriptions, {
+      drugId: '',
+      startDate: '',
+      endDate: '',
+      morning: false,
+      afternoon: false,
+      evening: false,
+      night: false
+    }]);
+  };
+
+  const removePrescription = index => {
+    const filteredPrescriptions = prescriptions.filter((_, i) => i !== index);
+    setPrescriptions(filteredPrescriptions);
+  };
+
+
+  const url = `${LOCAL_HOST_URL}doctor/citizen/`;
+  console.log(url);
 
   const [medicaldetails, setMedicaldetails] = useState({
     diagnosis : '',
@@ -42,6 +83,7 @@ export default function GenerateMedicals() {
   const handleSearch = async (e) => {
     console.log("clicking");
     e.preventDefault();
+    console.log(url+`${search.NIC}`)
     const response = await axios.get(url+`${search.NIC}`);
     console.log(response.data);
 
@@ -76,6 +118,33 @@ export default function GenerateMedicals() {
       [name] : value
     });
   }
+
+  const handleGenerateMedicalRecord = async () => {
+    const medicalRecordData = {
+      recordId: 0,
+      date: new Date(),
+      doctorId: 2,
+      citizenId: parseInt(persondetails.id),
+      healthCentreId: 1,
+      admissionId: 1,
+      prescriptions,
+      diseaseIds: []
+    };
+
+    try {
+      console.log(medicalRecordData);
+      const response = await axios.post(`${LOCAL_HOST_URL}doctor/create-medical-record`, medicalRecordData);
+      if (response.status === 200) {
+        toast.success('Medical record generated successfully!');
+      } else {
+        toast.error('Failed to generate medical record.');
+      }
+    } catch (error) {
+      console.error('Failed to generate medical record:', error);
+      toast.error('Error generating medical record.');
+    }
+  };
+  
 
 
   return (
@@ -213,15 +282,81 @@ export default function GenerateMedicals() {
             <div className='a-name-1b'>
               <span className='a-medications'>Medications</span>
               <div>
+        {prescriptions.map((prescription, index) => (
+          <div key={index} className="prescription-item">
+          <div className="input-group">
+          <select>
+        {drugs.map(drug => (
+          <option key={drug.id} value={drug.id}>{drug.name}</option>
+        ))}
+      </select>
+          </div>
+          <div className="input-group">
+            <input
+              type="date"
+              className="form-control"
+              placeholder="Start Date"
+              name="startDate"
+              value={prescription.startDate}
+              onChange={e => handlePrescriptionChange(index, e)}
+            />
+          </div>
+          <div className="input-group">
+            <input
+              type="date"
+              className="form-control"
+              placeholder="End Date"
+              name="endDate"
+              value={prescription.endDate}
+              onChange={e => handlePrescriptionChange(index, e)}
+            />
+          </div>
+          <div className="checkbox-group">
+            <label className="checkbox-label">
               <input
-                type='text'
-                className='a-name-field-1c'
-                name='medications'
-                value={medicaldetails.medications}
-                onChange={handleMedicalDetailsChange}
-                placeholder='Medications'
-              />
-              </div>
+                type="checkbox"
+                className="checkbox-input"
+                name="morning"
+                checked={prescription.morning}
+                onChange={e => handlePrescriptionChange(index, e)}
+              /> Morning
+            </label>
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                className="checkbox-input"
+                name="afternoon"
+                checked={prescription.afternoon}
+                onChange={e => handlePrescriptionChange(index, e)}
+              /> Afternoon
+            </label>
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                className="checkbox-input"
+                name="evening"
+                checked={prescription.evening}
+                onChange={e => handlePrescriptionChange(index, e)}
+              /> Evening
+            </label>
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                className="checkbox-input"
+                name="night"
+                checked={prescription.night}
+                onChange={e => handlePrescriptionChange(index, e)}
+              /> Night
+            </label>
+          </div>
+          <button className="button btn-delete" onClick={() => removePrescription(index)}>
+            Remove
+          </button>
+        </div>
+        
+        ))}
+        <button onClick={addPrescription}>Add Prescription</button>
+      </div>
             </div>
           </div>
           <div className='a-name-1e'>
@@ -241,9 +376,10 @@ export default function GenerateMedicals() {
             <button className='a-cancel-button'>
               <span className='a-cancel'>Cancel</span>
             </button>
-            <button className='a-save-button-21'>
-              <span className='a-text-22'>Save Changes</span>
+            <button className='a-save-button-21' onClick={handleGenerateMedicalRecord}>
+              <span className='a-text-22'>Generate Medical Record</span>
             </button>
+            
           </div>
           <div className='a-vector-23' />
         </div>
