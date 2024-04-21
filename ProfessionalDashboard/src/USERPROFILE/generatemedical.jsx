@@ -285,7 +285,7 @@ export default function GenerateMedicals() {
         {prescriptions.map((prescription, index) => (
           <div key={index} className="prescription-item">
           <div className="input-group">
-          <select>
+          <select className='a-addbutton1112'>
         {drugs.map(drug => (
           <option key={drug.id} value={drug.id}>{drug.name}</option>
         ))}
@@ -355,7 +355,7 @@ export default function GenerateMedicals() {
         </div>
         
         ))}
-        <button onClick={addPrescription}>Add Prescription</button>
+        <button className='a-addbutton111' onClick={addPrescription}>Add Prescription</button>
       </div>
             </div>
           </div>

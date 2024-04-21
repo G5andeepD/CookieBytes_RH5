@@ -41,6 +41,8 @@ export default function Viewmedicals() {
 
     const calculatedAge = "24";
 
+    const location1 = response.data.latitude+"+"+response.data.longitude;
+
     if(response.status === 200){
       setPersonDetails({
         id: response.data.id,
@@ -50,7 +52,7 @@ export default function Viewmedicals() {
         weight : response.data.weight,
         email : response.data.email,
         phone : response.data.contactNo,
-        location : response.data.location,
+        location : location1,
         firstname : response.data.firstName,
         lastname : response.data.lastName,
         username : response.data.username,
@@ -191,16 +193,12 @@ export default function Viewmedicals() {
               <span className='c-prescriptions'>Prescriptions</span>
             </div>
             <div className='c-location-field-19'>
-              <span className='c-age2'>{1} {2}  {3}  {4}  {5}  {6}</span>
               </div>
             <div className='c-location-field-1a'>
-              <span className='c-age2'>{1} {2}  {3}  {4}  {5}  {6}</span>
               </div>
             <div className='c-location-field-1b'>
-              <span className='c-age2'>{1} {2}  {3}  {4}  {5}  {6}</span>
               </div>
             <div className='c-location-field-1c'>
-              <span className='c-age2'>{1} {2}  {3}  {4}  {5}  {6}</span>
               </div>
             <div className='c-location-field-1d' />
             <div className='c-location-field-1e' />

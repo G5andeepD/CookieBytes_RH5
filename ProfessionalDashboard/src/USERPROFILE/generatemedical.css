@@ -24,7 +24,7 @@ button {
 .a-main-container {
   position: relative;
   width: 1920px;
-  height: 1229px;
+  height: 1629px;
   margin: 0 auto;
   background: #131126;
   overflow: hidden;
@@ -1072,6 +1072,8 @@ button {
   flex-shrink: 0;
   position: relative;
   width: 186.633px;
+  top:80px;
+  left: -540px;
   height: 56px;
   padding: 8px 0 8px 0;
   cursor: pointer;
@@ -1101,9 +1103,10 @@ button {
 }
 .a-save-button-21 {
   gap: 8px;
+  top:80px;
   position: relative;
-  left: -80px;
-  width: 140px;
+  left: -580px;
+  width: 180px;
   height: 36px;
   padding: 10px 19px 10px 21px;
   cursor: pointer;
@@ -1128,7 +1131,7 @@ button {
   white-space: nowrap;
   z-index: 47;
 }
-.a-vector-23 {
+/* .a-vector-23 {
   position: relative;
   width: 1038.012px;
   height: 1px;
@@ -1137,7 +1140,7 @@ button {
     no-repeat center;
   background-size: cover;
   z-index: 42;
-}
+} */
 .a-rectangle {
   position: absolute;
   width: 1422px;
@@ -1360,10 +1363,26 @@ button {
 }
 
 .form-control {
-  width: 100%;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 200.633px;
+  top:0px;
+  left: 0px;
+  height: 36px;
+  padding: 8px 0 8px 0;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #384d6c;
+  z-index: 48;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .checkbox-group {
@@ -1385,6 +1404,7 @@ button {
   background-color: red;
   color: white;
   border: none;
+  width: 80px;
   padding: 8px 16px;
   border-radius: 4px;
   cursor: pointer;
@@ -1392,4 +1412,37 @@ button {
 
 .button {
   margin-top: 10px;
+}
+.a-addbutton111 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  width: 150.633px;
+  top:0px;
+  left: 0px;
+  height: 56px;
+  padding: 8px 0 8px 0;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1px solid #384d6c;
+  z-index: 48;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.a-addbutton1112 {
+  position: relative;
+  width: 250.633px;
+  top:0px;
+  left: 0px;
+  height: 30px;
+  cursor: pointer;
+  background: #fefdfd;
+  border: 1px solid #384d6c;
+  z-index: 48;
+  font-size: 20px;
+  border-radius: 8px;
 }
