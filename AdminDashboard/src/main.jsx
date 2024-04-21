@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import { ViewDoctors } from './Pages/ViewPage';
 import { MapPage } from './Components/Map';
+import { BarChart } from './Components/ChartView';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
       {
         path: "ViewMap",
         element: <MapPage />
+      },
+      {
+        path: "ViewChart",
+        element: <BarChart />
+
       }
     ]
   },
