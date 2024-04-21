@@ -2,12 +2,18 @@ import "./CitizenUserProfile.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
+import { getUserID } from "./ComplaintsPage";
 
 const CitizenUserProfile = () => {
 
   const [loc, setLoc] = useState({
     location:""
   });
+
+  let current_user = localStorage.getItem("currentEmail")
+  let currentUserInfo = getUserID(current_user)
+  let firstNameC = currentUserInfo.firstname
+  let lastNameC = currentUserInfo.lastname
 
   const onLocChange = (e) => {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -19,8 +25,6 @@ const CitizenUserProfile = () => {
     localStorage.setItem("token","")
   };
 
-  
-
   return (
     <div className="citizenuserprofile">
       <div className="citizenprofile">
@@ -29,7 +33,7 @@ const CitizenUserProfile = () => {
             <div className="profilepane">
               <div className="profilepane-child" />
               <img className="profilepane-item" alt="" src="/group-2.svg" />
-              <div className="praveen-sumanasekara">Jake Parelta</div>
+              <div className="praveen-sumanasekara">{firstNameC} {lastNameC}</div>
               <div className="material-symbolslocation-on-parent">
                 <button className="location-button" onClick={onLocChange}>
                 <img

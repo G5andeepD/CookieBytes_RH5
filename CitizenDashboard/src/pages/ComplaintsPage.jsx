@@ -1,10 +1,8 @@
 import "./ComplaintsPage.css";
 import { Link } from "react-router-dom";
 
-const ComplaintsPage = () => {
-
-  function getUser(email){
-  let user_str_db = localStorage.getItem()
+export function getUserID(email){
+  let user_str_db = localStorage.getItem(email)
 
   function extractName(string_obj){
     let user_nonstr_db = JSON.parse(string_obj)
@@ -12,6 +10,8 @@ const ComplaintsPage = () => {
   };
     return extractName(user_str_db);
   };
+
+const ComplaintsPage = () => {
 
   return (
     <div className="complaintspage">

@@ -29,6 +29,9 @@ const SignInPage = () => {
           password:value.password
         };
     console.log(value);
+    // let loginUser = {cur_email:value.NICNumber}
+    // let loginUser_str = JSON.stringify(loginUser)
+    localStorage.setItem("currentEmail", value.NICNumber);
     axios.post("http://192.168.1.11:5000/api/v1/auth/authenticate", data).then(response => {
       console.log(response.data)
       localStorage.setItem("token", response.data.access_token)
