@@ -61,7 +61,7 @@ public class SecurityConfiguration {
                         "/file/upload",
                         "/api/v1/admintest/**",
                         "/api/v1/doctor/**",
-                        "api/v1/user/book"
+                        "/api/v1/emergency/**"
 
 
                 )

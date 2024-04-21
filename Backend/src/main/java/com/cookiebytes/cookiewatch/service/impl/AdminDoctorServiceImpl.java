@@ -5,12 +5,14 @@ import com.cookiebytes.cookiewatch.dto.DoctorDTO;
 import com.cookiebytes.cookiewatch.entity.Doctor;
 import com.cookiebytes.cookiewatch.repository.DoctorRepository;
 import com.cookiebytes.cookiewatch.service.AdminDoctorService;
+import com.cookiebytes.cookiewatch.service.MailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
@@ -20,18 +22,28 @@ public class AdminDoctorServiceImpl implements AdminDoctorService {
     private DoctorRepository doctorRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
+    @Autowired
+    private MailService mailService;
 
     @Override
     @Transactional
     public DoctorDTO addDoctor(CreateDoctorRequest createRequest) {
+
         Doctor doctor = new Doctor();
+
+        String password = UUID.randomUUID().toString();
+
         doctor.setFirstName(createRequest.getFirstName());
         doctor.setLastName(createRequest.getLastName());
         doctor.setEmail(createRequest.getEmail());
-        doctor.setPassword(passwordEncoder.encode("doctor"));
+        doctor.setPassword(password);
         doctor.setContactNo(createRequest.getContactNo());
         doctor.setLicenseNo(createRequest.getLicenseNo());
         doctor.setSpeciality(createRequest.getSpecialty());
+
+        mailService.sendDoctorVerificationEmail(doctor);
+
+        doctor.setPassword(passwordEncoder.encode(password));
         return mapToDoctorDTO(doctorRepository.save(doctor));
     }
 
