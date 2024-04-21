@@ -2,6 +2,17 @@ import "./ComplaintsPage.css";
 import { Link } from "react-router-dom";
 
 const ComplaintsPage = () => {
+
+  function getUser(email){
+  let user_str_db = localStorage.getItem()
+
+  function extractName(string_obj){
+    let user_nonstr_db = JSON.parse(string_obj)
+    return user_nonstr_db;
+  };
+    return extractName(user_str_db);
+  };
+
   return (
     <div className="complaintspage">
       <div className="rightpane3">

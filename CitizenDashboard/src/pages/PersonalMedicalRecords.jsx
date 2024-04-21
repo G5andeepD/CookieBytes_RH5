@@ -26,10 +26,10 @@ const PersonalMedicalRecords = () => {
               <div className="buddhi-wijenayake">24/2/3</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Buddhi Wijenayake</div>
+              <div className="buddhi-wijenayake">Sherlock Holmes</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">HIV</div>
+              <div className="buddhi-wijenayake">Ear Infection</div>
             </div>
             <div className="wrapper">
               <div className="buddhi-wijenayake">RIP</div>
@@ -40,13 +40,13 @@ const PersonalMedicalRecords = () => {
               <div className="buddhi-wijenayake">24/1/4</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Sandeep Dassanayake</div>
+              <div className="buddhi-wijenayake">Sherlock Holmes</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Autism</div>
+              <div className="buddhi-wijenayake">Sore Throat</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Do Engineering</div>
+              <div className="buddhi-wijenayake">RIP</div>
             </div>
           </div>
           <div className="frame-parent1">
@@ -54,10 +54,10 @@ const PersonalMedicalRecords = () => {
               <div className="buddhi-wijenayake">23/12/5</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Buddhi Wijenayake</div>
+              <div className="buddhi-wijenayake">Sherlock Holmes</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">HIV</div>
+              <div className="buddhi-wijenayake">Ear Infection</div>
             </div>
             <div className="wrapper">
               <div className="buddhi-wijenayake">RIP</div>
@@ -68,13 +68,13 @@ const PersonalMedicalRecords = () => {
               <div className="buddhi-wijenayake">23/11/6</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Sandeep Dassanayake</div>
+              <div className="buddhi-wijenayake">Sherlock Holmes</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">Autism</div>
+              <div className="buddhi-wijenayake">Sore Throat</div>
             </div>
             <div className="wrapper">
-              <div className="buddhi-wijenayake">DO Engineering</div>
+              <div className="buddhi-wijenayake">RIP</div>
             </div>
           </div>
         </div>
@@ -86,7 +86,7 @@ const PersonalMedicalRecords = () => {
       />
       <div className="leftpane2">
         <img className="leftpane-child" alt="" src="/group-21.svg" />
-        <div className="praveen-sumanasekara1">Praveen Sumanasekara</div>
+        <div className="praveen-sumanasekara1">Jake Parelta</div>
         <div className="dgraphic">
           <img className="dgraphic-child" alt="" src="/frame-217@2x.png" />
           <img className="dgraphic-item" alt="" src="/frame-204@2x.png" />

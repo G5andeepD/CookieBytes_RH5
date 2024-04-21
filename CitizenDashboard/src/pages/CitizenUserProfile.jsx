@@ -1,12 +1,25 @@
 import "./CitizenUserProfile.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
 
 const CitizenUserProfile = () => {
+
+  const [loc, setLoc] = useState({
+    location:""
+  });
+
+  const onLocChange = (e) => {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      setLoc({location : position.coords.latitude + ',' + position.coords.longitude});
+    });
+  };
 
   function releaseToken(){
     localStorage.setItem("token","")
   };
+
+  
 
   return (
     <div className="citizenuserprofile">
@@ -16,26 +29,28 @@ const CitizenUserProfile = () => {
             <div className="profilepane">
               <div className="profilepane-child" />
               <img className="profilepane-item" alt="" src="/group-2.svg" />
-              <div className="praveen-sumanasekara">Praveen Sumanasekara</div>
+              <div className="praveen-sumanasekara">Jake Parelta</div>
               <div className="material-symbolslocation-on-parent">
+                <button className="location-button" onClick={onLocChange}>
                 <img
                   className="material-symbolslocation-on-icon"
                   alt=""
                   src="/materialsymbolslocationon.svg"
                 />
-                <div className="badulla-sri-lanka">Badulla, Sri Lanka</div>
+                <div className="badulla-sri-lanka">{loc.location}</div>
+                </button>
               </div>
               <div className="group-parent">
                 <div className="parent">
-                  <div className="div">150</div>
+                  <div className="div">--</div>
                   <div className="weight">Weight</div>
                 </div>
                 <div className="group">
-                  <div className="div1">22.5</div>
+                  <div className="div1">--</div>
                   <div className="bmi">BMI</div>
                 </div>
                 <div className="container">
-                  <div className="div2">180</div>
+                  <div className="div2">--</div>
                   <div className="weight">Height</div>
                 </div>
               </div>
@@ -55,10 +70,12 @@ const CitizenUserProfile = () => {
             <div className="rightpanebuttons">
               <div className="group-div">
                 <div className="rectangle-parent">
+                <Link to="/personalmedicalrecords">
                   <div className="group-inner" />
                   <b className="view-personal-medical">
                     View Personal Medical Records
                   </b>
+                  </Link>
                 </div>
                 <div className="rectangle-parent1">
                   <div className="rectangle-div" />
@@ -68,6 +85,7 @@ const CitizenUserProfile = () => {
                 </div>
               </div>
               <div className="group-parent1">
+                
                 <div className="rectangle-parent">
                   <div className="group-inner" />
                   <b className="give-access-to">
@@ -80,6 +98,7 @@ const CitizenUserProfile = () => {
                     <div className="add-friends">Add friends</div>
                   </div>
                 </div>
+                
               </div>
               <div className="group-parent2">
                 <Link to="/complaintspage">

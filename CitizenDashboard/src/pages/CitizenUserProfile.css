@@ -108,6 +108,17 @@
   font-weight: 600;
   display: inline-block;
 }
+.material-symbolslocation-on-parent{
+  background-color: transparent;
+  width: 115px;
+  scale: 200%;
+  left:150px;
+  top:325px;
+}
+.material-symbolslocation-on-icon{
+  scale:160%;
+  top:-2px
+}
 .bmi {
   height: 28.84%;
   width: 52.87%;
@@ -265,6 +276,7 @@
   letter-spacing: 0.09em;
   line-height: 87.52%;
   display: inline-block;
+  color: white;
 }
 .rectangle-div {
   position: absolute;
@@ -323,6 +335,7 @@
   letter-spacing: 0.09em;
   line-height: 87.52%;
   display: inline-block;
+  color: white;
 }
 .group-child2 {
   position: absolute;
@@ -431,6 +444,7 @@
   letter-spacing: 0.09em;
   line-height: 87.52%;
   display: inline-block;
+  color: white;
 }
 .group-child6 {
   height: 22.51%;

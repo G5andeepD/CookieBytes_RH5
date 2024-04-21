@@ -40,6 +40,9 @@ const SignUpPage = () => {
           email:value.email,
           password:value.password
         };
+      let user = {firstname: value.firstName, lastname:value.lastName}
+      let user_str = JSON.stringify(user)
+      localStorage.setItem(value.email, user_str)
     // console.log(value);
     axios.post("http://192.168.1.11:5000/api/v1/auth/register", data).then(response => {
       console.log(response.data)

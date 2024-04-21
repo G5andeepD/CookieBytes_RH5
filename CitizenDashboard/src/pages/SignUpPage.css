@@ -69,6 +69,7 @@
   font-weight: bold;
   z-index: 80px;
   cursor: pointer;
+  color: white;
 }
 .already-have-an-account-wrapper {
   position: absolute;
