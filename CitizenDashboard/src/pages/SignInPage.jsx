@@ -97,7 +97,7 @@ const SignInPage = () => {
         />
         <div className="hoveringbutton1">
           <div className="hoveringbutton-item" />
-          <div className="add-button-text1"><button type="submit">Sign In</button></div>
+          <div className="add-button-text1"><button className="submit-button" type="submit">Sign In</button></div>
         </div>
       </form>
       <img

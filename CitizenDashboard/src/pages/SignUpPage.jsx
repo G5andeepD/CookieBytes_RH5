@@ -43,10 +43,11 @@ const SignUpPage = () => {
     // console.log(value);
     axios.post("http://192.168.1.11:5000/api/v1/auth/register", data).then(response => {
       console.log(response.data)
+      navigate("/signinpage")
     }).catch(error => {
       console.error(error)
     });
-    navigate("/signinpage")
+    
   };
 
   return (
@@ -174,7 +175,7 @@ const SignUpPage = () => {
         />
         <div className="hoveringbutton">
           <div className={(password == confirmPassword && password != "") ? "hoveringbutton-child":"hoveringbuttondisabled-child"} />
-          <div className="add-button-text"><button type="submit">Sign Up</button></div>
+          <div className="add-button-text"><button className="submit-button" type="submit">Sign Up</button></div>
         </div>
         <div className="inputfield5">
         <input

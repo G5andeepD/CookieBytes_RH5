@@ -1,4 +1,5 @@
 import "./ComplaintsPage.css";
+import { Link } from "react-router-dom";
 
 const ComplaintsPage = () => {
   return (
@@ -13,8 +14,10 @@ const ComplaintsPage = () => {
           </div>
         </div>
         <div className="buttonsubmit">
+          <Link to="/citizenuserprofile">
           <div className="buttonsubmit-child" />
           <div className="submit">Submit</div>
+          </Link>
         </div>
       </div>
       <img

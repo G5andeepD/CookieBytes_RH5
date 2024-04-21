@@ -82,6 +82,7 @@ const CitizenUserProfile = () => {
                 </div>
               </div>
               <div className="group-parent2">
+                <Link to="/complaintspage">
                 <div className="rectangle-parent">
                   <div className="group-inner" />
                   <b className="give-access-to">Submit Complaints</b>
@@ -92,6 +93,7 @@ const CitizenUserProfile = () => {
                     <div className="add-friends">Add friends</div>
                   </div>
                 </div>
+                </Link>
               </div>
               <div className="group-parent3" onClick={releaseToken}>
                 <Link to="/">

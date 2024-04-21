@@ -94,6 +94,16 @@
   border-radius: var(--br-81xl);
   background-color: var(--color-slateblue);
 }
+.submit-button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 80px;
+  cursor: pointer;
+}
 .add-button-text1 {
   position: absolute;
   height: 77.05%;

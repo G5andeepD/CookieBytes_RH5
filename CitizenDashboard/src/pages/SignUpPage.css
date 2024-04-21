@@ -60,6 +60,16 @@
   left: 586px;
   width: 386px;
 }
+.submit-button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 80px;
+  cursor: pointer;
+}
 .already-have-an-account-wrapper {
   position: absolute;
   top: 921px;
