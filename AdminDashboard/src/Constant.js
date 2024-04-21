@@ -6,4 +6,5 @@ function join_server_and_endpoint(base, endpoint) {
 export const CREATE_DOCTOR = join_server_and_endpoint(BASE_URL, "api/v1/admin/doctor")
 export const AUTH_ADMIN = join_server_and_endpoint(BASE_URL, "api/v1/auth/authenticate")
 export const GET_DOCTORS = join_server_and_endpoint(BASE_URL, "api/v1/admin/doctor/list")
+export const GET_DISEASES = join_server_and_endpoint(BASE_URL, "api/v1/doctor/disease")
 
