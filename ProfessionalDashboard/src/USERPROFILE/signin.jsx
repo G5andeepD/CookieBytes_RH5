@@ -7,6 +7,8 @@ import { setAuthToken } from '../setAuthToken()';
 import { AuthContext } from '../Context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
 
 import { useState,useContext} from 'react';
 
@@ -98,9 +100,11 @@ export default function SignIN() {
           <span className='b-forgot-password'>Forgot Password?</span>
           <span className='b-account-registration'>
             
-            Don't have an account yet? 
+            Require Medical Support? 
           </span>
-          <span className='b-sign-up'>Sign Up</span>
+          <Link to='./emergency'>
+          <span className='b-sign-up'>Emergency</span>
+          </Link>
           <button className='b-rectangle-5' onClick={handleSubmit2}>
           <span className='b-add-button-text'>Sign In</span>
           </button>

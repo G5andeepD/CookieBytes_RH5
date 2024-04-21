@@ -296,6 +296,36 @@ button {
   letter-spacing: 1.44px;
   z-index: 21;
 }
+.b-rectangle-52 {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  top: 34.52%;
+  left: 38.49%;
+  cursor: pointer;
+  background: #6069c7;
+  border: none;
+  z-index: 20;
+  border-radius: 100px;
+}
+.b-add-button-text2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 213px;
+  height: 2.43%;
+  top: 35.24%;
+  left: 0px;
+  color: #ffffff;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.125px;
+  text-align: center;
+  letter-spacing: 1.44px;
+  z-index: 21;
+}
 .b-welcome-to-cookiewatch {
   position: absolute;
   width: 405px;

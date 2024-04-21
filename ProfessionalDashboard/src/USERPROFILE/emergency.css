@@ -274,6 +274,24 @@ button {
   letter-spacing: 1.44px;
   z-index: 90;
 }
+.e-add-button2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  width: 213px;
+  height: 2.43%;
+  top: -80px;
+  left: 150px;
+  color: #010101;
+  font-family: Roboto, var(--default-font-family);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 28.125px;
+  text-align: center;
+  letter-spacing: 1.44px;
+  z-index: 90;
+}
 .e-welcome-cookie-watch {
   display: flex;
   align-items: flex-start;

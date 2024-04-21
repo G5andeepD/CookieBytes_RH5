@@ -14,10 +14,10 @@ export default function userprofile(){
   const [formdata, setFormdata] = useState({
     first_name: userProfile?.firstName || "Sherlock",
     last_name: userProfile?.lastName || "Holmes",
-    user_name: userProfile?.email || "Sherlock Bytes",
-    national_id: "123108970",
+    user_name: userProfile?.user || "Sherlock",
+    national_id: "123456789",
     email: userProfile?.email || "sherlock@cookiebytes.com",
-    phone: userProfile?.contactNo || "+9421300113",
+    phone: userProfile?.contactNo || "0701960880",
     residential_location: "Kandy",
     speciality: userProfile?.speciality || "Cardiology",
     license_number: userProfile?.licenseNo || "11330648293",

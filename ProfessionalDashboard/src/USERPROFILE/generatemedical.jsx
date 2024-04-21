@@ -88,6 +88,8 @@ export default function GenerateMedicals() {
     console.log(response.data);
 
     const calculatedAge = "24";
+    
+    const location1 = response.data.latitude+"+"+response.data.longitude;
 
     if(response.status === 200){
       setPersonDetails({
@@ -98,7 +100,7 @@ export default function GenerateMedicals() {
         weight : response.data.weight,
         email : response.data.email,
         phone : response.data.contactNo,
-        location : response.data.location,
+        location : response.data.location1,
         firstname : response.data.firstName,
         lastname : response.data.lastName,
         username : response.data.username,

@@ -7,32 +7,32 @@ import { Link } from 'react-router-dom';
 
 export default function EmergencyPage() {
 
-  const [data, setdata] = useState({
-    mobileNumber : '',
-    location : '',
-  });
+  const [data2,setdata2] = useState("");
+  const [location,setlocation2] = useState("6.9271, 79.8612");
 
-  const onMobileNumberChange = (e) => {
-    setdata({mobileNumber : e.target.value});
+  const ontextChange = (e) => {
+    setdata2(e.target.value);
   }
 
   const onLocationChange = (e) => {
     navigator.geolocation.getCurrentPosition(function(position) {
-      setdata({location : position.coords.latitude + ',' + position.coords.longitude});
+      setlocation2(position.coords.latitude + ',' + position.coords.longitude);
+      // setdata({location: '6.9271, 79.8612'});
     });
   }
 
-  const url = 'http://localhost:5000/api/emergency';
+  const url = 'http://192.168.1.11:5000/api/v1/emergency/signal';
 
   const onSubmit = () => {
-    // axios.post(url, data)
-    // .then((response) => {
-    //   console.log(response);
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // });
-    window.location.href = '/';
+    // console.log(data2);
+    axios.post(url, {text:data2, location:location})
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+    // window.location.href = '/';
   }
 
 
@@ -54,8 +54,8 @@ export default function EmergencyPage() {
             <input
               type='text'
               className='e-name-field'
-              value={data.mobileNumber}
-              onChange={onMobileNumberChange}
+              value={data2}
+              onChange={ontextChange}
             />
           </div>
           <span className='e-reaching-out-soon'>
@@ -74,7 +74,9 @@ export default function EmergencyPage() {
           <div>
           <span className='e-add-location'>Add your Location</span>
           </div>
-          <button className='e-rectangle-7' onClick={onSubmit}/>
+          <button className='e-rectangle-7' onClick={onSubmit}>
+            <span className='e-add-button2'>{location}</span>
+            </button>
           <span className='e-add-button'>Submit</span>
         </div>
         <span className='e-welcome-cookie-watch'>
