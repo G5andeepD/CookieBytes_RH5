@@ -1435,14 +1435,14 @@ button {
 
 .a-addbutton1112 {
   position: relative;
-  width: 150.633px;
+  width: 250.633px;
   top:0px;
   left: 0px;
-  height: 16px;
+  height: 30px;
   cursor: pointer;
-  background: #da8787;
+  background: #fefdfd;
   border: 1px solid #384d6c;
   z-index: 48;
-  font-size: 24px;
+  font-size: 20px;
   border-radius: 8px;
 }
