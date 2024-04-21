@@ -1,6 +1,13 @@
 import "./PersonalMedicalRecords.css";
+import { getUserID } from "./ComplaintsPage";
 
 const PersonalMedicalRecords = () => {
+
+  let current_user = localStorage.getItem("currentEmail")
+  let currentUserInfo = getUserID(current_user)
+  let firstNameC = currentUserInfo.firstname
+  let lastNameC = currentUserInfo.lastname
+
   return (
     <div className="personalmedicalrecords">
       <div className="rightpane2">
@@ -86,7 +93,7 @@ const PersonalMedicalRecords = () => {
       />
       <div className="leftpane2">
         <img className="leftpane-child" alt="" src="/group-21.svg" />
-        <div className="praveen-sumanasekara1">Jake Parelta</div>
+        <div className="praveen-sumanasekara1">{firstNameC} {lastNameC}</div>
         <div className="dgraphic">
           <img className="dgraphic-child" alt="" src="/frame-217@2x.png" />
           <img className="dgraphic-item" alt="" src="/frame-204@2x.png" />

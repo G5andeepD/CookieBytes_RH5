@@ -117,7 +117,8 @@
 }
 .material-symbolslocation-on-icon{
   scale:160%;
-  top:-2px
+  top:-2px;
+  cursor: pointer;
 }
 .bmi {
   height: 28.84%;

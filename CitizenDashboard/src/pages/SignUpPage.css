@@ -126,6 +126,7 @@
   left: 2.54%;
   border-radius: var(--br-81xl);
   background-color: #ABB1BB;
+  cursor: auto;
 }
 .add-button-text {
   position: absolute;
