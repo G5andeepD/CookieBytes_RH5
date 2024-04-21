@@ -1,6 +1,7 @@
 package com.cookiebytes.cookiewatch.service.impl;
 
 
+import com.cookiebytes.cookiewatch.entity.Doctor;
 import com.cookiebytes.cookiewatch.entity.User;
 import com.cookiebytes.cookiewatch.service.MailService;
 import org.springframework.mail.SimpleMailMessage;
@@ -55,5 +56,59 @@ public class MailServiceImpl implements MailService {
         javaMailSender.send(message);
 
         return "Password reset email sent successfully";
+    }
+@Override
+    public String sendDoctorVerificationEmail(Doctor doctor) {
+
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setFrom("cookiebytes.uop@gmail.com");
+        message.setTo(doctor.getEmail());
+
+        String text = "Hi " + doctor.getFirstName() + " " + doctor.getLastName() + ",\n\n"
+                + "This is the login for your CookieWatch account." + "\n"
+                + "Your password is: " + doctor.getPassword() + "\n\n"
+                + "Make Sure that you use this password to login for the first time and reset it\n, and also delete this email after you see this.\n\n"
+                + "Thanks,\n"
+                + "CookieWatch Team";
+
+        message.setSubject("Welcome to CookieWatch");
+        message.setText(text);
+        System.out.println(message);
+
+        javaMailSender.send(message);
+
+        return "success";
+
+    }
+
+    @Override
+
+    public String sendCommunityComplainReachout(String text, String location) {
+        SimpleMailMessage message = new SimpleMailMessage();
+
+        message.setFrom("cookiebytes.uop@gmail.com");
+        message.setTo("wijenayakebuddhi34802@gmail.com");
+
+        // Generate Google Maps URL from location
+        String mapsLink = "https://www.google.com/maps/search/?api=1&query=" + location;
+
+        // Determine if it's a community complaint or distress message based on content
+        String subject;
+        if (text.startsWith("Distress:")) {
+            subject = "Urgent Distress Notification";
+            text += "\n\nLocation of the incident: " + mapsLink + "\n\nImmediate attention required.";
+        } else {
+            subject = "Community Complaint";
+            text += "\n\nView the complaint location here: " + mapsLink;
+        }
+
+        message.setSubject(subject);
+        message.setText(text);
+        System.out.println(message);
+
+        javaMailSender.send(message);
+
+        return "success";
     }
 }
