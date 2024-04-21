@@ -1,6 +1,13 @@
 import "./CitizenUserProfile.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const CitizenUserProfile = () => {
+
+  function releaseToken(){
+    localStorage.setItem("token","")
+  };
+
   return (
     <div className="citizenuserprofile">
       <div className="citizenprofile">
@@ -86,7 +93,8 @@ const CitizenUserProfile = () => {
                   </div>
                 </div>
               </div>
-              <div className="group-parent3">
+              <div className="group-parent3" onClick={releaseToken}>
+                <Link to="/">
                 <div className="rectangle-parent">
                   <div className="group-inner" />
                   <b className="log-out">Log Out</b>
@@ -97,6 +105,7 @@ const CitizenUserProfile = () => {
                     <div className="add-friends">Add friends</div>
                   </div>
                 </div>
+                </Link>
               </div>
             </div>
           </div>
