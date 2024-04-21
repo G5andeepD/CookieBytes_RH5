@@ -4,11 +4,15 @@ import './signin.css';
 import { Component } from 'react';
 import axios from 'axios';
 import { setAuthToken } from '../setAuthToken()';
+import { AuthContext } from '../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 
-import { useState } from 'react';
+import { useState,useContext} from 'react';
 
 export default function SignIN() {
+  const {login} = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [signinfo, setsigninfo] = useState({
     email: '',
@@ -47,6 +51,13 @@ export default function SignIN() {
 				console.log(error)
 			})
   }
+  const handleSubmit2 = async (e) => {
+    e.preventDefault()
+    await login(signinfo.email, signinfo.password);
+    setTimeout(() => {
+      navigate('/userprofile');
+  }, 1000); 
+ }
 
   return (
     <div className='b-main-container'>
@@ -90,7 +101,7 @@ export default function SignIN() {
             Don't have an account yet? 
           </span>
           <span className='b-sign-up'>Sign Up</span>
-          <button className='b-rectangle-5' onClick={handleSubmit}>
+          <button className='b-rectangle-5' onClick={handleSubmit2}>
           <span className='b-add-button-text'>Sign In</span>
           </button>
         </div>

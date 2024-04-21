@@ -2,9 +2,11 @@ package com.cookiebytes.cookiewatch.auth;
 
 
 import com.cookiebytes.cookiewatch.config.JwtService;
+import com.cookiebytes.cookiewatch.entity.Doctor;
 import com.cookiebytes.cookiewatch.entity.Token;
 import com.cookiebytes.cookiewatch.entity.User;
 import com.cookiebytes.cookiewatch.entity.VerificationCode;
+import com.cookiebytes.cookiewatch.repository.DoctorRepository;
 import com.cookiebytes.cookiewatch.repository.TokenRepository;
 import com.cookiebytes.cookiewatch.repository.UserRepository;
 import com.cookiebytes.cookiewatch.repository.VerificationCodeRepository;
@@ -22,6 +24,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -32,15 +35,17 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final TokenRepository tokenRepository;
     private final AuthenticationManager authenticationManager;
+    private final DoctorRepository doctorRepository;
 
 
-    public AuthenticationService(UserRepository userRepository, PasswordEncoder passwordEncoder, VerificationCodeRepository verificationCodeRepository, JwtService jwtService, TokenRepository tokenRepository, AuthenticationManager authenticationManager) {
+    public AuthenticationService(UserRepository userRepository, PasswordEncoder passwordEncoder, VerificationCodeRepository verificationCodeRepository, JwtService jwtService, TokenRepository tokenRepository, AuthenticationManager authenticationManager, DoctorRepository doctorRepository) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.verificationCodeRepository = verificationCodeRepository;
         this.jwtService = jwtService;
         this.tokenRepository = tokenRepository;
         this.authenticationManager = authenticationManager;
+        this.doctorRepository = doctorRepository;
     }
 
     public User register(RegisterRequest registerRequest) {
@@ -112,17 +117,25 @@ public class AuthenticationService {
         System.out.println(request.getEmail());
         var user = userRepository.findByEmail(request.getEmail())
                 .orElseThrow();
-
-
         var jwtToken = jwtService.generateToken(user);
         var refreshToken = jwtService.generateRefreshToken(user);
         revokeAllUserTokens(user);
         saveUserToken(user, jwtToken);
-        return AuthenticationResponse.builder()
+        AuthenticationResponse response =  AuthenticationResponse.builder()
                 .accessToken(jwtToken)
                 .refreshToken(refreshToken)
                 .role(user.getRole())
                 .build();
+
+        if (user.getRole().equals(Role.DOCTOR)){
+            Optional<Doctor> doctor = doctorRepository.findById(user.getId());
+            doctor.ifPresent(response::setDoctor);
+
+        }
+        return response;
+
+
+
     }
 
     private void saveUserToken(User user, String jwtToken) {

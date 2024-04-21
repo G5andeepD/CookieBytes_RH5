@@ -1,6 +1,7 @@
 package com.cookiebytes.cookiewatch.auth;
 
 
+import com.cookiebytes.cookiewatch.entity.Doctor;
 import com.cookiebytes.cookiewatch.util.Role;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -20,5 +21,8 @@ public class AuthenticationResponse {
     private String refreshToken;
     @JsonProperty("role")
     private Role role;
+
+    @JsonProperty("profile")
+    private Doctor doctor;
 
 }

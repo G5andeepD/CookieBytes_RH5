@@ -6,6 +6,7 @@ import com.cookiebytes.cookiewatch.entity.Doctor;
 import com.cookiebytes.cookiewatch.repository.DoctorRepository;
 import com.cookiebytes.cookiewatch.service.AdminDoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -17,6 +18,8 @@ public class AdminDoctorServiceImpl implements AdminDoctorService {
 
     @Autowired
     private DoctorRepository doctorRepository;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     @Transactional
@@ -25,6 +28,7 @@ public class AdminDoctorServiceImpl implements AdminDoctorService {
         doctor.setFirstName(createRequest.getFirstName());
         doctor.setLastName(createRequest.getLastName());
         doctor.setEmail(createRequest.getEmail());
+        doctor.setPassword(passwordEncoder.encode("doctor"));
         doctor.setContactNo(createRequest.getContactNo());
         doctor.setLicenseNo(createRequest.getLicenseNo());
         doctor.setSpeciality(createRequest.getSpecialty());

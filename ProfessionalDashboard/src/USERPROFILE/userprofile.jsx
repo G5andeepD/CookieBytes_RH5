@@ -1,22 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './index.css';
+import axios from 'axios';
 
-import {useState} from 'react';
+import {useState,useContext} from 'react';
+import { AuthContext } from '../Context/AuthContext';
 import { Link } from 'react-router-dom';
 
 export default function userprofile(){
+  const {userProfile} = useContext(AuthContext);
+    
+
+    
   const [formdata, setFormdata] = useState({
-  first_name : "",
-  last_name : "",
-  user_name : "",
-  national_id : "",
-  email : "",
-  phone : "",
-  residential_location : "",
-  speciality : "",
-  liscense_number : "",
-  working_locations : [],
+    first_name: userProfile?.firstName || "Sherlock",
+    last_name: userProfile?.lastName || "Holmes",
+    user_name: userProfile?.email || "Sherlock Bytes",
+    national_id: "123108970",
+    email: userProfile?.email || "sherlock@cookiebytes.com",
+    phone: userProfile?.contactNo || "+9421300113",
+    residential_location: "Kandy",
+    speciality: userProfile?.speciality || "Cardiology",
+    license_number: userProfile?.licenseNo || "11330648293",
+    working_locations: ["Asiri", "Nawaloka", "Hemas"],
   });
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
