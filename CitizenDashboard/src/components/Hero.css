@@ -1,0 +1,93 @@
+.other-01-3 {
+  position: absolute;
+  height: 100%;
+  width: 46.37%;
+  top: 0;
+  right: 53.63%;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.empowering-health-one,
+.take-charge-of {
+  position: relative;
+  text-transform: capitalize;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.empowering-health-one {
+  width: 713.1px;
+  font-weight: 800;
+  height: 403px;
+}
+.take-charge-of {
+  width: 634.9px;
+  height: 110px;
+}
+.hoveringbutton-inner {
+  position: absolute;
+  height: 88.52%;
+  width: 94.69%;
+  top: 0;
+  right: 2.73%;
+  bottom: 11.48%;
+  left: 2.58%;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-slateblue);
+}
+.add-button-text3 {
+  position: absolute;
+  height: 77.05%;
+  width: 100%;
+  top: 22.95%;
+  left: 0;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  display: inline-block;
+}
+.hoveringbutton2 {
+  width: 128.1px;
+  position: relative;
+  height: 61px;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+}
+.frame1,
+.mainheadline {
+  display: flex;
+  flex-direction: column;
+}
+.frame1 {
+  width: 634.9px;
+  height: 175px;
+  overflow: hidden;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-9xs);
+  margin-top: -221px;
+  font-size: var(--font-size-xl);
+}
+.mainheadline {
+  position: absolute;
+  top: 172px;
+  left: 649.9px;
+  width: 713.1px;
+  height: 403px;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.hero {
+  position: absolute;
+  top: 116px;
+  left: 38px;
+  width: 1363px;
+  height: 665px;
+  text-align: left;
+  font-size: var(--font-size-53xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}

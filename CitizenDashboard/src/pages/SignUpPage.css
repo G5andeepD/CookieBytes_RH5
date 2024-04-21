@@ -1,0 +1,228 @@
+.sign-up {
+  position: absolute;
+  top: 128px;
+  left: 361px;
+  font-size: var(--font-size-45xl);
+  font-weight: 800;
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+  width: 435px;
+  height: 96px;
+}
+.email-address {
+  position: relative;
+  font-weight: 500;
+}
+.email-address-wrapper {
+  position: absolute;
+  top: -22px;
+  left: 17px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.inputfield,
+.inputfield1,
+.inputfield2,
+.inputfield3,
+.inputfield4 {
+  position: absolute;
+  top: 396px;
+  left: 180px;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 792px;
+  height: 77px;
+}
+.inputfield1,
+.inputfield2,
+.inputfield3,
+.inputfield4 {
+  top: 498px;
+}
+.inputfield2,
+.inputfield3,
+.inputfield4 {
+  top: 600px;
+}
+.inputfield3,
+.inputfield4 {
+  top: 703px;
+}
+.inputfield4 {
+  top: 294px;
+  left: 586px;
+  width: 386px;
+}
+.submit-button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 80px;
+  cursor: pointer;
+  color: white;
+}
+.already-have-an-account-wrapper {
+  position: absolute;
+  top: 921px;
+  left: 453px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+  text-align: center;
+}
+.home-duotone-icon,
+.sign-in {
+  position: absolute;
+  cursor: pointer;
+}
+.sign-in {
+  top: 955px;
+  left: 469px;
+  font-weight: 500;
+  color: var(--color-slateblue);
+  text-align: center;
+  display: inline-block;
+  width: 219px;
+  height: 34px;
+}
+.home-duotone-icon {
+  top: 30px;
+  left: 1055px;
+  width: 75px;
+  height: 75px;
+}
+.hoveringbutton-child {
+  position: absolute;
+  height: 88.52%;
+  width: 94.66%;
+  top: 0;
+  right: 2.8%;
+  bottom: 11.48%;
+  left: 2.54%;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-slateblue);
+}
+.hoveringbuttondisabled-child {
+  position: absolute;
+  height: 88.52%;
+  width: 94.66%;
+  top: 0;
+  right: 2.8%;
+  bottom: 11.48%;
+  left: 2.54%;
+  border-radius: var(--br-81xl);
+  background-color: #ABB1BB;
+  cursor: auto;
+}
+.add-button-text {
+  position: absolute;
+  height: 77.05%;
+  width: 100%;
+  top: 22.95%;
+  left: 0;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  display: inline-block;
+}
+.hoveringbutton {
+  position: absolute;
+  top: 837px;
+  left: 482px;
+  width: 189px;
+  height: 61px;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.inputfield5 {
+  position: absolute;
+  top: 294px;
+  left: 180px;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 386px;
+  height: 77px;
+}
+.rightpane {
+  position: absolute;
+  top: 0;
+  left: 576px;
+  border-radius: var(--br-21xl) 0 0 var(--br-21xl);
+  background-color: var(--color-white);
+  width: 1152px;
+  height: 1117px;
+}
+.blurredellipses-icon {
+  position: absolute;
+  top: 158px;
+  left: -200px;
+  width: 706px;
+  height: 1200px;
+}
+.welcome-to {
+  margin: 0;
+}
+.watch {
+  color: var(--color-slateblue);
+}
+.welcome-to-cookiewatch-container {
+  position: absolute;
+  height: 10.7%;
+  width: 48.33%;
+  top: 0;
+  left: 11.78%;
+  font-weight: 800;
+  display: inline-block;
+}
+.image-icon {
+  position: absolute;
+  height: 75.25%;
+  width: 100%;
+  top: 24.75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.leftpane {
+  position: absolute;
+  top: 107px;
+  left: -35px;
+  width: 900px;
+  height: 897px;
+  text-align: center;
+  font-size: var(--font-size-45xl);
+  color: var(--color-white);
+  font-family: var(--font-overpass);
+}
+.signuppage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-300);
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+  font-family: var(--font-outfit);
+}

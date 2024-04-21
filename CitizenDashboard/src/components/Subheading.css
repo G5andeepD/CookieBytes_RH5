@@ -1,0 +1,44 @@
+.effortlessly-track-medical,
+.local-disease-outbreak {
+  position: absolute;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.local-disease-outbreak {
+  height: 59.7%;
+  width: 49.74%;
+  top: 28%;
+  left: 0;
+  font-weight: 800;
+}
+.effortlessly-track-medical {
+  height: 21.63%;
+  width: 49.67%;
+  top: 62.37%;
+  left: 0.07%;
+  font-size: var(--font-size-xl);
+}
+.other-01-11 {
+  position: absolute;
+  height: 100%;
+  width: 49.74%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50.26%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.subheading3 {
+  position: absolute;
+  top: 1759px;
+  left: 38px;
+  width: 1357px;
+  height: 675px;
+  text-align: left;
+  font-size: var(--font-size-45xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}

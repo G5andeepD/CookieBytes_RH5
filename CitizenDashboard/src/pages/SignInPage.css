@@ -1,0 +1,191 @@
+.sign-in1 {
+  position: absolute;
+  top: 222px;
+  left: 356px;
+  font-size: var(--font-size-45xl);
+  font-weight: 800;
+  color: var(--color-black);
+  text-align: center;
+  display: inline-block;
+  width: 435px;
+  height: 96px;
+}
+.nic-number-or {
+  position: relative;
+  font-weight: 500;
+}
+.nic-number-or-email-wrapper {
+  position: absolute;
+  top: -22px;
+  left: 17px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3xs);
+}
+.rightpane-inner {
+  position: absolute;
+  top: 386px;
+  left: 381px;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 386px;
+  height: 77px;
+}
+.frame-child {
+  position: absolute;
+  top: 241px;
+  left: 280px;
+  background-color: var(--color-white);
+  width: 89px;
+  height: 45px;
+  overflow: hidden;
+}
+.frame-parent {
+  position: absolute;
+  top: 504px;
+  left: 381px;
+  border-radius: var(--br-xl);
+  border: 1px solid var(--color-gray-100);
+  box-sizing: border-box;
+  width: 386px;
+  height: 77px;
+}
+.sign-up1 {
+  position: absolute;
+  top: 759px;
+  left: 539px;
+  font-weight: 500;
+  color: #474baa;
+  cursor: pointer;
+}
+.dont-have-an,
+.forgot-password {
+  position: absolute;
+  top: 734px;
+  left: 460px;
+  font-weight: 500;
+}
+.forgot-password {
+  top: 600px;
+  left: 401px;
+  color: #6365a3;
+}
+.home-duotone-icon1 {
+  position: absolute;
+  top: 23px;
+  left: 1043px;
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+}
+.hoveringbutton-item {
+  position: absolute;
+  height: 88.52%;
+  width: 94.65%;
+  top: 0;
+  right: 2.78%;
+  bottom: 11.48%;
+  left: 2.57%;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-slateblue);
+}
+.submit-button{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 80px;
+  cursor: pointer;
+}
+.add-button-text1 {
+  position: absolute;
+  height: 77.05%;
+  width: 100%;
+  top: 22.95%;
+  left: 0;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+  display: inline-block;
+}
+.hoveringbutton1 {
+  position: absolute;
+  top: 649px;
+  left: 501px;
+  width: 144px;
+  height: 61px;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-roboto);
+}
+.rightpane1 {
+  position: absolute;
+  top: 0;
+  left: 581px;
+  border-radius: var(--br-21xl) 0 0 var(--br-21xl);
+  background-color: var(--color-white);
+  width: 1147px;
+  height: 1117px;
+}
+.blurredellipses-icon1 {
+  position: absolute;
+  top: 158px;
+  left: -200px;
+  width: 706px;
+  height: 1200px;
+}
+.watch1 {
+  color: var(--color-slateblue);
+}
+.welcome-to-cookiewatch-container1 {
+  position: absolute;
+  height: 10.7%;
+  width: 48.33%;
+  top: 0;
+  left: 7.89%;
+  font-weight: 800;
+  display: inline-block;
+}
+.image-icon1 {
+  position: absolute;
+  height: 75.25%;
+  width: 100%;
+  top: 24.75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.leftpane1 {
+  position: absolute;
+  top: 107px;
+  left: 0;
+  width: 900px;
+  height: 897px;
+  text-align: center;
+  font-size: var(--font-size-45xl);
+  color: var(--color-white);
+  font-family: var(--font-overpass);
+}
+.signinpage {
+  width: 100%;
+  position: relative;
+  background-color: var(--color-gray-300);
+  height: 1117px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+  font-family: var(--font-outfit);
+}

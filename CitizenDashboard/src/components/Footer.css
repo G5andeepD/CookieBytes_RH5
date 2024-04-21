@@ -1,0 +1,78 @@
+.actions,
+.contacts,
+.pages {
+  position: absolute;
+  top: 5.5%;
+  left: 31.31%;
+  text-transform: capitalize;
+}
+.actions,
+.contacts {
+  left: 50.46%;
+}
+.contacts {
+  left: 69.68%;
+}
+.home-our-team-container,
+.sign-up-sign-container {
+  position: absolute;
+  height: 73.7%;
+  width: 12.44%;
+  top: 26.3%;
+  left: 31.31%;
+  font-size: var(--font-size-base);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.sign-up-sign-container {
+  left: 50%;
+}
+.watch5 {
+  color: var(--color-slateblue);
+}
+.cookiewatch3 {
+  position: absolute;
+  top: 0;
+  left: 2.14%;
+  font-size: var(--font-size-29xl);
+  text-transform: capitalize;
+}
+.email {
+  margin-block-start: 0;
+  margin-block-end: 13px;
+}
+.twitter {
+  margin: 0;
+}
+.email-instagram-linkedin-container {
+  position: absolute;
+  height: 73.7%;
+  width: 12.44%;
+  top: 26.3%;
+  left: 69.85%;
+  font-size: var(--font-size-base);
+  text-transform: capitalize;
+  display: inline-block;
+}
+.bottomline,
+.footer {
+  position: absolute;
+  left: 0;
+}
+.bottomline {
+  height: 1.53%;
+  width: 100%;
+  top: 96.02%;
+  right: 0;
+  bottom: 2.45%;
+  background-color: var(--color-slateblue);
+}
+.footer {
+  top: 2494px;
+  width: 1728px;
+  height: 327px;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-outfit);
+}

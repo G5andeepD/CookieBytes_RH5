@@ -1,0 +1,34 @@
+.watch4 {
+  color: var(--color-slateblue);
+}
+.at-cookiewatch-we-container {
+  position: absolute;
+  width: 100%;
+  top: 27.35%;
+  left: 0;
+  text-transform: capitalize;
+  display: inline-block;
+}
+.quote,
+.quote-child {
+  position: absolute;
+  left: 0;
+}
+.quote-child {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: var(--br-3xs);
+  background-color: var(--color-steelblue);
+}
+.quote {
+  top: 806px;
+  width: 1433px;
+  height: 223px;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-outfit);
+}
